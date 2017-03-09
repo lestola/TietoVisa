@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ADD252741E71B5BC00EEC72D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252731E71B5BC00EEC72D /* AppDelegate.swift */; };
+		ADD252761E71B5BC00EEC72D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252751E71B5BC00EEC72D /* ViewController.swift */; };
+		ADD252791E71B5BC00EEC72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD252771E71B5BC00EEC72D /* Main.storyboard */; };
+		ADD2527B1E71B5BC00EEC72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD2527A1E71B5BC00EEC72D /* Assets.xcassets */; };
+		ADD2527E1E71B5BC00EEC72D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD2527C1E71B5BC00EEC72D /* LaunchScreen.storyboard */; };
+		ADD252891E71B5BC00EEC72D /* TietoVisaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252881E71B5BC00EEC72D /* TietoVisaTests.swift */; };
+		ADD252941E71B5BC00EEC72D /* TietoVisaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252931E71B5BC00EEC72D /* TietoVisaUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ADD252851E71B5BC00EEC72D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADD252681E71B5BB00EEC72D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADD2526F1E71B5BB00EEC72D;
+			remoteInfo = TietoVisa;
+		};
+		ADD252901E71B5BC00EEC72D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ADD252681E71B5BB00EEC72D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ADD2526F1E71B5BB00EEC72D;
+			remoteInfo = TietoVisa;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ADD252701E71B5BC00EEC72D /* TietoVisa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TietoVisa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD252731E71B5BC00EEC72D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ADD252751E71B5BC00EEC72D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADD252781E71B5BC00EEC72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ADD2527A1E71B5BC00EEC72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADD2527D1E71B5BC00EEC72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ADD2527F1E71B5BC00EEC72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADD252841E71B5BC00EEC72D /* TietoVisaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TietoVisaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD252881E71B5BC00EEC72D /* TietoVisaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TietoVisaTests.swift; sourceTree = "<group>"; };
+		ADD2528A1E71B5BC00EEC72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADD2528F1E71B5BC00EEC72D /* TietoVisaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TietoVisaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADD252931E71B5BC00EEC72D /* TietoVisaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TietoVisaUITests.swift; sourceTree = "<group>"; };
+		ADD252951E71B5BC00EEC72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ADD2526D1E71B5BB00EEC72D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADD252811E71B5BC00EEC72D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADD2528C1E71B5BC00EEC72D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADD252671E71B5BB00EEC72D = {
+			isa = PBXGroup;
+			children = (
+				ADD252721E71B5BC00EEC72D /* TietoVisa */,
+				ADD252871E71B5BC00EEC72D /* TietoVisaTests */,
+				ADD252921E71B5BC00EEC72D /* TietoVisaUITests */,
+				ADD252711E71B5BC00EEC72D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ADD252711E71B5BC00EEC72D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ADD252701E71B5BC00EEC72D /* TietoVisa.app */,
+				ADD252841E71B5BC00EEC72D /* TietoVisaTests.xctest */,
+				ADD2528F1E71B5BC00EEC72D /* TietoVisaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ADD252721E71B5BC00EEC72D /* TietoVisa */ = {
+			isa = PBXGroup;
+			children = (
+				ADD252731E71B5BC00EEC72D /* AppDelegate.swift */,
+				ADD252751E71B5BC00EEC72D /* ViewController.swift */,
+				ADD252771E71B5BC00EEC72D /* Main.storyboard */,
+				ADD2527A1E71B5BC00EEC72D /* Assets.xcassets */,
+				ADD2527C1E71B5BC00EEC72D /* LaunchScreen.storyboard */,
+				ADD2527F1E71B5BC00EEC72D /* Info.plist */,
+			);
+			path = TietoVisa;
+			sourceTree = "<group>";
+		};
+		ADD252871E71B5BC00EEC72D /* TietoVisaTests */ = {
+			isa = PBXGroup;
+			children = (
+				ADD252881E71B5BC00EEC72D /* TietoVisaTests.swift */,
+				ADD2528A1E71B5BC00EEC72D /* Info.plist */,
+			);
+			path = TietoVisaTests;
+			sourceTree = "<group>";
+		};
+		ADD252921E71B5BC00EEC72D /* TietoVisaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ADD252931E71B5BC00EEC72D /* TietoVisaUITests.swift */,
+				ADD252951E71B5BC00EEC72D /* Info.plist */,
+			);
+			path = TietoVisaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ADD2526F1E71B5BB00EEC72D /* TietoVisa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADD252981E71B5BC00EEC72D /* Build configuration list for PBXNativeTarget "TietoVisa" */;
+			buildPhases = (
+				ADD2526C1E71B5BB00EEC72D /* Sources */,
+				ADD2526D1E71B5BB00EEC72D /* Frameworks */,
+				ADD2526E1E71B5BB00EEC72D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TietoVisa;
+			productName = TietoVisa;
+			productReference = ADD252701E71B5BC00EEC72D /* TietoVisa.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ADD252831E71B5BC00EEC72D /* TietoVisaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADD2529B1E71B5BC00EEC72D /* Build configuration list for PBXNativeTarget "TietoVisaTests" */;
+			buildPhases = (
+				ADD252801E71B5BC00EEC72D /* Sources */,
+				ADD252811E71B5BC00EEC72D /* Frameworks */,
+				ADD252821E71B5BC00EEC72D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADD252861E71B5BC00EEC72D /* PBXTargetDependency */,
+			);
+			name = TietoVisaTests;
+			productName = TietoVisaTests;
+			productReference = ADD252841E71B5BC00EEC72D /* TietoVisaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ADD2528E1E71B5BC00EEC72D /* TietoVisaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ADD2529E1E71B5BC00EEC72D /* Build configuration list for PBXNativeTarget "TietoVisaUITests" */;
+			buildPhases = (
+				ADD2528B1E71B5BC00EEC72D /* Sources */,
+				ADD2528C1E71B5BC00EEC72D /* Frameworks */,
+				ADD2528D1E71B5BC00EEC72D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ADD252911E71B5BC00EEC72D /* PBXTargetDependency */,
+			);
+			name = TietoVisaUITests;
+			productName = TietoVisaUITests;
+			productReference = ADD2528F1E71B5BC00EEC72D /* TietoVisaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ADD252681E71B5BB00EEC72D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Marko Lehtola";
+				TargetAttributes = {
+					ADD2526F1E71B5BB00EEC72D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 624VJ5N9DG;
+						ProvisioningStyle = Automatic;
+					};
+					ADD252831E71B5BC00EEC72D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 624VJ5N9DG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ADD2526F1E71B5BB00EEC72D;
+					};
+					ADD2528E1E71B5BC00EEC72D = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 624VJ5N9DG;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ADD2526F1E71B5BB00EEC72D;
+					};
+				};
+			};
+			buildConfigurationList = ADD2526B1E71B5BB00EEC72D /* Build configuration list for PBXProject "TietoVisa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ADD252671E71B5BB00EEC72D;
+			productRefGroup = ADD252711E71B5BC00EEC72D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ADD2526F1E71B5BB00EEC72D /* TietoVisa */,
+				ADD252831E71B5BC00EEC72D /* TietoVisaTests */,
+				ADD2528E1E71B5BC00EEC72D /* TietoVisaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ADD2526E1E71B5BB00EEC72D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADD2527E1E71B5BC00EEC72D /* LaunchScreen.storyboard in Resources */,
+				ADD2527B1E71B5BC00EEC72D /* Assets.xcassets in Resources */,
+				ADD252791E71B5BC00EEC72D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADD252821E71B5BC00EEC72D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADD2528D1E71B5BC00EEC72D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ADD2526C1E71B5BB00EEC72D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADD252761E71B5BC00EEC72D /* ViewController.swift in Sources */,
+				ADD252741E71B5BC00EEC72D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADD252801E71B5BC00EEC72D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADD252891E71B5BC00EEC72D /* TietoVisaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADD2528B1E71B5BC00EEC72D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADD252941E71B5BC00EEC72D /* TietoVisaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ADD252861E71B5BC00EEC72D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADD2526F1E71B5BB00EEC72D /* TietoVisa */;
+			targetProxy = ADD252851E71B5BC00EEC72D /* PBXContainerItemProxy */;
+		};
+		ADD252911E71B5BC00EEC72D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADD2526F1E71B5BB00EEC72D /* TietoVisa */;
+			targetProxy = ADD252901E71B5BC00EEC72D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ADD252771E71B5BC00EEC72D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADD252781E71B5BC00EEC72D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ADD2527C1E71B5BC00EEC72D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADD2527D1E71B5BC00EEC72D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ADD252961E71B5BC00EEC72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ADD252971E71B5BC00EEC72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ADD252991E71B5BC00EEC72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 624VJ5N9DG;
+				INFOPLIST_FILE = TietoVisa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MarkoLehtola.TietoVisa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ADD2529A1E71B5BC00EEC72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 624VJ5N9DG;
+				INFOPLIST_FILE = TietoVisa/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MarkoLehtola.TietoVisa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		ADD2529C1E71B5BC00EEC72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 624VJ5N9DG;
+				INFOPLIST_FILE = TietoVisaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MarkoLehtola.TietoVisaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TietoVisa.app/TietoVisa";
+			};
+			name = Debug;
+		};
+		ADD2529D1E71B5BC00EEC72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 624VJ5N9DG;
+				INFOPLIST_FILE = TietoVisaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MarkoLehtola.TietoVisaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TietoVisa.app/TietoVisa";
+			};
+			name = Release;
+		};
+		ADD2529F1E71B5BC00EEC72D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 624VJ5N9DG;
+				INFOPLIST_FILE = TietoVisaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MarkoLehtola.TietoVisaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TietoVisa;
+			};
+			name = Debug;
+		};
+		ADD252A01E71B5BC00EEC72D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 624VJ5N9DG;
+				INFOPLIST_FILE = TietoVisaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = MarkoLehtola.TietoVisaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = TietoVisa;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ADD2526B1E71B5BB00EEC72D /* Build configuration list for PBXProject "TietoVisa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD252961E71B5BC00EEC72D /* Debug */,
+				ADD252971E71B5BC00EEC72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ADD252981E71B5BC00EEC72D /* Build configuration list for PBXNativeTarget "TietoVisa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD252991E71B5BC00EEC72D /* Debug */,
+				ADD2529A1E71B5BC00EEC72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADD2529B1E71B5BC00EEC72D /* Build configuration list for PBXNativeTarget "TietoVisaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD2529C1E71B5BC00EEC72D /* Debug */,
+				ADD2529D1E71B5BC00EEC72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ADD2529E1E71B5BC00EEC72D /* Build configuration list for PBXNativeTarget "TietoVisaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ADD2529F1E71B5BC00EEC72D /* Debug */,
+				ADD252A01E71B5BC00EEC72D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ADD252681E71B5BB00EEC72D /* Project object */;
+}
