@@ -18,6 +18,7 @@
 		ADD252891E71B5BC00EEC72D /* TietoVisaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252881E71B5BC00EEC72D /* TietoVisaTests.swift */; };
 		ADD252941E71B5BC00EEC72D /* TietoVisaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252931E71B5BC00EEC72D /* TietoVisaUITests.swift */; };
 		ADDBE0F41E773A4300ED1A03 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = ADDBE0F31E773A4300ED1A03 /* GoogleService-Info.plist */; };
+		ADDBE0F61E773FD500ED1A03 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADDBE0F51E773FD500ED1A03 /* ComposeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		ADD252931E71B5BC00EEC72D /* TietoVisaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TietoVisaUITests.swift; sourceTree = "<group>"; };
 		ADD252951E71B5BC00EEC72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ADDBE0F31E773A4300ED1A03 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADDBE0F51E773FD500ED1A03 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		C701B4890CFD1AE05F46674B /* Pods-TietoVisa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TietoVisa.release.xcconfig"; path = "Pods/Target Support Files/Pods-TietoVisa/Pods-TietoVisa.release.xcconfig"; sourceTree = "<group>"; };
 		CBEFBBB8051A69302F63380B /* Pods-TietoVisaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TietoVisaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TietoVisaTests/Pods-TietoVisaTests.release.xcconfig"; sourceTree = "<group>"; };
 		EDFBE07E91E2062F3D2E1397 /* Pods_TietoVisaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TietoVisaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 			children = (
 				ADD252731E71B5BC00EEC72D /* AppDelegate.swift */,
 				ADD252751E71B5BC00EEC72D /* ViewController.swift */,
+				ADDBE0F51E773FD500ED1A03 /* ComposeViewController.swift */,
 				ADD252771E71B5BC00EEC72D /* Main.storyboard */,
 				ADD2527A1E71B5BC00EEC72D /* Assets.xcassets */,
 				ADD2527C1E71B5BC00EEC72D /* LaunchScreen.storyboard */,
@@ -453,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADDBE0F61E773FD500ED1A03 /* ComposeViewController.swift in Sources */,
 				ADD252761E71B5BC00EEC72D /* ViewController.swift in Sources */,
 				ADD252741E71B5BC00EEC72D /* AppDelegate.swift in Sources */,
 			);
