@@ -12,6 +12,11 @@ import FirebaseDatabase
 class ComposeViewController: UIViewController {
 
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var kysymysTextField: UITextField!
+    @IBOutlet weak var oikeaVastausTextField: UITextField!
+    @IBOutlet weak var vaaraVastaus1TextField: UITextField!
+    @IBOutlet weak var vaaraVastaus2TextField: UITextField!
+    @IBOutlet weak var vaaraVastaus3TextField: UITextField!
     
     var ref:FIRDatabaseReference?
     
@@ -39,10 +44,15 @@ class ComposeViewController: UIViewController {
     */
     
     @IBAction func addPost(_ sender: Any) {
-        //post data to firebase
-        ref?.child("Kysymykset").child("Elokuvat").childByAutoId().child("question").setValue(textView.text)
-        
-        
+        //lisätään kysymys tietokantaan
+        let key = ref?.child("Kysymykset").child("Elokuvat").childByAutoId().key
+        let post = ["question": kysymysTextField.text,
+                    "answer1": oikeaVastausTextField.text,
+                    "answer2": vaaraVastaus1TextField.text,
+                    "answer3": vaaraVastaus2TextField.text,
+                    "answer4": vaaraVastaus3TextField.text]
+        let childUpdates = ["/Kysymykset/Elokuvat/\(key)": post]
+        ref?.updateChildValues(childUpdates)
         
         //dismiss the pop over
         presentingViewController?.dismiss(animated: true, completion: nil)
