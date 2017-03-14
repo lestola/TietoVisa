@@ -40,7 +40,8 @@ class ComposeViewController: UIViewController {
     
     @IBAction func addPost(_ sender: Any) {
         //post data to firebase
-        ref?.child("Posts").childByAutoId().setValue(textView.text)
+        ref?.child("Kysymykset").child("Elokuvat").childByAutoId().child("question").setValue(textView.text)
+        
         
         
         //dismiss the pop over
