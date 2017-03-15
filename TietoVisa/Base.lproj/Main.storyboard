@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NNB-SI-efw" id="oZk-lc-2Jp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -170,21 +170,37 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sini" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-CS-mAt">
+                                <rect key="frame" x="21" y="404" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="true" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-4o-5Tf">
+                                <rect key="frame" x="16" y="430" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WLi-Uy-MtM" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="01a-pt-Hr5"/>
                             <constraint firstItem="WLi-Uy-MtM" firstAttribute="top" secondItem="d7H-bO-qyk" secondAttribute="bottom" constant="5" id="0tR-2F-2UC"/>
                             <constraint firstItem="krT-if-sKC" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="19a-FQ-j1a"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ccp-CS-mAt" secondAttribute="trailing" constant="5" id="3A5-SH-hhb"/>
                             <constraint firstItem="ToU-7B-xDv" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leading" id="5pk-PB-jAG"/>
+                            <constraint firstItem="qsw-4o-5Tf" firstAttribute="top" secondItem="Ccp-CS-mAt" secondAttribute="bottom" constant="5" id="8IV-Lg-obV"/>
                             <constraint firstAttribute="trailing" secondItem="ToU-7B-xDv" secondAttribute="trailing" id="AMO-oq-mRK"/>
                             <constraint firstItem="Gx7-ee-e72" firstAttribute="top" secondItem="krT-if-sKC" secondAttribute="bottom" constant="5" id="ARx-ds-lGd"/>
                             <constraint firstItem="JM6-Ht-d5Z" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="Avc-6Z-E05"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Gx7-ee-e72" secondAttribute="trailing" id="DEw-0i-UQx"/>
+                            <constraint firstItem="qsw-4o-5Tf" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="DhL-ry-Hnr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yaj-xH-2fs" secondAttribute="trailing" id="EIi-9A-Xd6"/>
                             <constraint firstItem="WXI-29-ZiX" firstAttribute="top" secondItem="WLi-Uy-MtM" secondAttribute="bottom" constant="5" id="GN5-Mi-Lff"/>
                             <constraint firstItem="d7H-bO-qyk" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="HLZ-oT-YYK"/>
                             <constraint firstItem="85J-jZ-oTR" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="Lgk-bb-tEV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qsw-4o-5Tf" secondAttribute="trailing" id="Lgv-ej-KnU"/>
                             <constraint firstItem="WXI-29-ZiX" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="LiX-Zb-eg7"/>
                             <constraint firstItem="yaj-xH-2fs" firstAttribute="top" secondItem="85J-jZ-oTR" secondAttribute="bottom" constant="5" id="MwD-3L-zwM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="85J-jZ-oTR" secondAttribute="trailing" id="Pow-25-q4X"/>
@@ -196,6 +212,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="WLi-Uy-MtM" secondAttribute="trailing" id="ajQ-yG-Bk4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JM6-Ht-d5Z" secondAttribute="trailing" id="ekf-HS-C0b"/>
                             <constraint firstItem="fGX-b4-I4T" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="hrb-Bd-JoP"/>
+                            <constraint firstItem="Ccp-CS-mAt" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" constant="5" id="iwF-ML-Xai"/>
                             <constraint firstAttribute="trailingMargin" secondItem="d7H-bO-qyk" secondAttribute="trailing" id="jfe-UP-tCR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fGX-b4-I4T" secondAttribute="trailing" id="oSF-tL-L01"/>
                             <constraint firstItem="W08-iw-fWS" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="qTD-8S-fox"/>
@@ -203,6 +220,7 @@
                             <constraint firstItem="krT-if-sKC" firstAttribute="top" secondItem="fGX-b4-I4T" secondAttribute="bottom" constant="5" id="riq-al-xAA"/>
                             <constraint firstItem="ToU-7B-xDv" firstAttribute="top" secondItem="3Xe-xv-hI7" secondAttribute="bottom" id="tIK-LZ-WJ6"/>
                             <constraint firstItem="JM6-Ht-d5Z" firstAttribute="top" secondItem="Gx7-ee-e72" secondAttribute="bottom" constant="5" id="u9Q-sW-CbJ"/>
+                            <constraint firstItem="Ccp-CS-mAt" firstAttribute="top" secondItem="WXI-29-ZiX" secondAttribute="bottom" constant="5" id="wcf-Ve-9xE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="krT-if-sKC" secondAttribute="trailing" id="xGU-pd-3cR"/>
                             <constraint firstItem="85J-jZ-oTR" firstAttribute="top" secondItem="W08-iw-fWS" secondAttribute="bottom" constant="5" id="yX1-Ew-Fta"/>
                             <constraint firstItem="W08-iw-fWS" firstAttribute="top" secondItem="ToU-7B-xDv" secondAttribute="bottom" constant="5" id="zac-qd-doo"/>
@@ -211,9 +229,11 @@
                     <connections>
                         <outlet property="kysymysTextField" destination="85J-jZ-oTR" id="mQc-h3-cMr"/>
                         <outlet property="oikeaVastausTextField" destination="fGX-b4-I4T" id="KBM-1R-tTS"/>
+                        <outlet property="userLabel" destination="Ccp-CS-mAt" id="lUv-0I-hWI"/>
                         <outlet property="vaaraVastaus1TextField" destination="Gx7-ee-e72" id="rqA-ki-EEi"/>
                         <outlet property="vaaraVastaus2TextField" destination="d7H-bO-qyk" id="0rP-2c-U2w"/>
                         <outlet property="vaaraVastaus3TextField" destination="WXI-29-ZiX" id="ndX-BU-9Fs"/>
+                        <outlet property="verifyedLabel" destination="qsw-4o-5Tf" id="mJj-EL-qSG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yg-wE-Jvk" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -17,6 +17,8 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var vaaraVastaus1TextField: UITextField!
     @IBOutlet weak var vaaraVastaus2TextField: UITextField!
     @IBOutlet weak var vaaraVastaus3TextField: UITextField!
+    @IBOutlet weak var userLabel: UILabel!
+    @IBOutlet weak var verifyedLabel: UILabel!
     
     var ref:FIRDatabaseReference?
     
@@ -50,7 +52,9 @@ class ComposeViewController: UIViewController {
                     "answer1": oikeaVastausTextField.text,
                     "answer2": vaaraVastaus1TextField.text,
                     "answer3": vaaraVastaus2TextField.text,
-                    "answer4": vaaraVastaus3TextField.text]
+                    "answer4": vaaraVastaus3TextField.text,
+                    "addedby": userLabel.text,
+                    "verifyed": verifyedLabel.text]
         let childUpdates = ["/Kysymykset/Elokuvat/\(key)": post]
         ref?.updateChildValues(childUpdates)
         
