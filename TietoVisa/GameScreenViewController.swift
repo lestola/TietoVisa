@@ -13,6 +13,10 @@ class GameScreenViewController: UIViewController  {
 
     @IBOutlet weak var kysymysLabel: UILabel!
     @IBOutlet weak var aikaProgressBar: UIProgressView!
+    @IBOutlet weak var vastaus1Button: UIButton!
+    @IBOutlet weak var vastaus2Button: UIButton!
+    @IBOutlet weak var vastaus3Button: UIButton!
+    @IBOutlet weak var vastaus4Button: UIButton!
   
     var ref:FIRDatabaseReference?
     
@@ -26,13 +30,22 @@ class GameScreenViewController: UIViewController  {
     
     
     func lataaKysymysTietokannasta(){
-    //TODO: tähän tulee koodi joka lataa kysymyksen tietokanasta, sekä kysymykseen liitetyt väärät, sekä oikean vastauksen nappuloihin
+    //koodi joka lataa kysymyksen tietokanasta, sekä kysymykseen liitetyt väärät, sekä oikean vastauksen nappuloihin
+    //TODO: nappuloita pitää sekoittaa.. nyt ensimmäisessä aina oikea vastaus!
         ref?.child("Kysymykset").child("Elokuvat").child("kysymys1").observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
             let kysymys = value?["question"] as? String ?? ""
+            let oikeaVastaus = value?["answer1"] as? String ?? ""
+            let vaara1Vastaus = value?["answer2"] as? String ?? ""
+            let vaara2Vastaus = value?["answer3"] as? String ?? ""
+            let vaara3Vastaus = value?["answer4"] as? String ?? ""
             
             self.kysymysLabel.text = kysymys
+            self.vastaus1Button.setTitle(oikeaVastaus, for: .init())
+            self.vastaus2Button.setTitle(vaara1Vastaus, for: .init())
+            self.vastaus3Button.setTitle(vaara2Vastaus, for: .init())
+            self.vastaus4Button.setTitle(vaara3Vastaus, for: .init())
             
             // ...
         }) { (error) in
