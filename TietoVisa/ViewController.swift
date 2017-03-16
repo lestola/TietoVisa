@@ -33,11 +33,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         
         //retrieve the post and listen for changes
-        databaseHandle = ref?.child("Posts").observe(.childAdded, with: { (snapshot) in
+        //alkuperäinen
+        //databaseHandle = ref?.child("Kysymykset").child("Elokuvat").child("kysymys1").observe(.childAdded, with: { (snapshot) in
+            
+        databaseHandle = ref?.child("Kysymykset").child("Elokuvat").observe(.value, with: { (snapshot) in
             
             // code to execute when a child is added under "posts"
             // take the value frmom the snapshot and added it to the post data array
-            let post = snapshot.value as? String
+            //alkuperäinen
+            //let post = snapshot.value as? String
+            let post = snapshot.key as? String
             
             if let actualPost = post {
                 
