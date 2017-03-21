@@ -24,6 +24,9 @@ class GameScreenViewController: UIViewController  {
     
     var categoryName:String = ""
     
+    var numberOfQuestion:Int = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +34,28 @@ class GameScreenViewController: UIViewController  {
         ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view.
         getNameOfCategory()
+        
+    }
+    
+    func getNumberOfQuestion(){
+        //arvotaan kategoria ja valitaan sen muuttujaan
+        ref?.child("Kysymykset").child(self.categoryName).child("Data").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            
+            let value = snapshot.value as? NSDictionary
+            let howManyQuestions = value?["Count"] as! Int
+            let randomNumber = arc4random_uniform(UInt32(howManyQuestions)) + 1
+            print(randomNumber)
+            self.numberOfQuestion = Int(randomNumber)
+            print(self.numberOfQuestion)
+            print(self.numberOfQuestion)
+            self.lataaKysymysTietokannasta()
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+
+        
         
     }
     
@@ -47,7 +72,7 @@ class GameScreenViewController: UIViewController  {
             
             print(self.categoryName)
             print(self.categoryName)
-            self.lataaKysymysTietokannasta()
+            self.getNumberOfQuestion()
             // ...
         }) { (error) in
             print(error.localizedDescription)
@@ -61,11 +86,10 @@ class GameScreenViewController: UIViewController  {
 
     //koodi joka lataa kysymyksen tietokanasta, sekä kysymykseen liitetyt väärät, sekä oikean vastauksen nappuloihin
     //TODO: nappuloita pitää sekoittaa.. nyt ensimmäisessä aina oikea vastaus!
-        let numero:Int = 1
         
         print(self.categoryName)
         print(self.categoryName)
-        ref?.child("Kysymykset").child(self.categoryName).child(String(numero)).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref?.child("Kysymykset").child(self.categoryName).child(String(self.numberOfQuestion)).observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
             let kysymys = value?["question"] as? String ?? ""
