@@ -19,20 +19,18 @@ class GameScreenViewController: UIViewController  {
     @IBOutlet weak var vastaus4Button: UIButton!
   
     var ref:FIRDatabaseReference?
-    
+    //muutama laiton muuttuja
     var Array = [String]()
-    
     var categoryName:String = ""
-    
     var numberOfQuestion:Int = 0
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //yhdistetään tietokantaan
         ref = FIRDatabase.database().reference()
-        // Do any additional setup after loading the view.
+        //lähtään hakemaan kategorian nimeä
         getNameOfCategory()
         
     }
@@ -41,54 +39,39 @@ class GameScreenViewController: UIViewController  {
         //arvotaan kategoria ja valitaan sen muuttujaan
         ref?.child("Kysymykset").child(self.categoryName).child("Data").observeSingleEvent(of: .value, with: { (snapshot) in
             
-            
             let value = snapshot.value as? NSDictionary
             let howManyQuestions = value?["Count"] as! Int
             let randomNumber = arc4random_uniform(UInt32(howManyQuestions)) + 1
-            print(randomNumber)
             self.numberOfQuestion = Int(randomNumber)
-            print(self.numberOfQuestion)
-            print(self.numberOfQuestion)
+            //siirrytään itse kysymyksen hakuun ja sen saattamiseen ruudulle
             self.lataaKysymysTietokannasta()
             // ...
         }) { (error) in
             print(error.localizedDescription)
         }
-
-        
-        
     }
     
     func getNameOfCategory(){
         //arvotaan kategoria ja valitaan sen muuttujaan
         ref?.child("Data").child("Kategoriat").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            
+        
             let value = snapshot.value as? NSDictionary
             let countOfCategories = value?["Count"] as! Int
             let randomCategory = arc4random_uniform(UInt32(countOfCategories))
-            print(randomCategory)
             self.categoryName = value?[String(randomCategory)] as? String ?? ""
-            
-            print(self.categoryName)
-            print(self.categoryName)
+            //siirrytään kysymys numeron hakuun
             self.getNumberOfQuestion()
             // ...
         }) { (error) in
             print(error.localizedDescription)
         }
-        
-    
     }
     
-    
     func lataaKysymysTietokannasta(){
-
     //koodi joka lataa kysymyksen tietokanasta, sekä kysymykseen liitetyt väärät, sekä oikean vastauksen nappuloihin
     //TODO: nappuloita pitää sekoittaa.. nyt ensimmäisessä aina oikea vastaus!
-        
         print(self.categoryName)
-        print(self.categoryName)
+        print(self.numberOfQuestion)
         ref?.child("Kysymykset").child(self.categoryName).child(String(self.numberOfQuestion)).observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
@@ -108,7 +91,6 @@ class GameScreenViewController: UIViewController  {
         }) { (error) in
             print(error.localizedDescription)
             }
-        
     }
   
     

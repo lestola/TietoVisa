@@ -38,8 +38,6 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             //yhdistetään tietokantaan tekemällä ref
         ref = FIRDatabase.database().reference()
             
-        //haetaan kysymysten määrä teitokannasta
-        getNumberOfQuestions()
             
         //pickerView dataSourcen ja delegaten määrittely, lähteenä itsensä
         Picker1.delegate = self
@@ -55,46 +53,57 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func getNumberOfQuestions() {
         
         //haetaan kysymyksen numero tietokannasta ja asetetaan se muuttujaan newSequenceNumber
-        ref?.child("Kysymykset").child("Elokuvat").child("Data").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref?.child("Kysymykset").child(valittuKategoria).child("Data").observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
-            let countOfQuestions = value?["Count"] as! Int
+            var countOfQuestions = value?["Count"] as! Int
+    
+            print("tämä oli tietokannassa getnumeberissa:")
+            print(countOfQuestions)
             
-            self.newSequenceNumber = countOfQuestions
-            print("tämä asetetaan getnumeberissa:")
+            countOfQuestions += 1
+            print("tämä asetetaan getnumberissa:")
             print(self.newSequenceNumber)
             
+            self.writeToDatabase(sequenceNumber: countOfQuestions)
             // ...
         }) { (error) in
             print(error.localizedDescription)
         }
-
+        //kirjoitetaan tiedot tietokantaan
+        
         
     }
     
-    @IBAction func addPost(_ sender: Any) {
+    func writeToDatabase(sequenceNumber:Int){
         
         //lisätään kysymys tietokantaan
         print("tämä ptäisi mennä tietokantaan:")
-        print(self.newSequenceNumber)
+        print(sequenceNumber)
         
-        //lisätään countterin muuttujaan yksi
-        self.newSequenceNumber += 1
-        let key = ref?.child("Kysymykset").child(valittuKategoria).child(String(newSequenceNumber)).key
+        //määritellään le post...
         let post = ["question": kysymysTextField.text,
                     "answer1": oikeaVastausTextField.text,
                     "answer2": vaaraVastaus1TextField.text,
                     "answer3": vaaraVastaus2TextField.text,
                     "answer4": vaaraVastaus3TextField.text,
                     "addedby": userLabel.text,
-                    "verifyed": verifyedLabel.text]
-        let childUpdates = ["/Kysymykset/Elokuvat/\(key)": post]
+                    "unverifyed": verifyedLabel.text,
+                    "reported" : verifyedLabel.text]
+        
+        let childUpdates = ["/Kysymykset/\(valittuKategoria)/\(sequenceNumber)": post]
         ref?.updateChildValues(childUpdates)
-        
+ 
         //lisätään myös countterin tietokanta arvoon 1 jotta kysymysten määrä mätsää!!
+ 
+        self.ref?.child("Kysymykset").child(valittuKategoria).child("Data").setValue(["Count": sequenceNumber])
         
-        self.ref?.child("Kysymykset").child("Elokuvat").child("Data").setValue(["Count": self.newSequenceNumber])
+    }
+    
+    @IBAction func addPost(_ sender: Any) {
         
+        //haetaan kysymysten määrä teitokannasta
+        getNumberOfQuestions()
         
         //dismiss the pop over
         presentingViewController?.dismiss(animated: true, completion: nil)
