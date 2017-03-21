@@ -20,19 +20,52 @@ class GameScreenViewController: UIViewController  {
   
     var ref:FIRDatabaseReference?
     
+    var Array = [String]()
+    
+    var categoryName:String = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ref = FIRDatabase.database().reference()
         // Do any additional setup after loading the view.
-        lataaKysymysTietokannasta()
+        getNameOfCategory()
+        
+    }
+    
+    func getNameOfCategory(){
+        //arvotaan kategoria ja valitaan sen muuttujaan
+        ref?.child("Data").child("Kategoriat").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            
+            let value = snapshot.value as? NSDictionary
+            let countOfCategories = value?["Count"] as! Int
+            let randomCategory = arc4random_uniform(UInt32(countOfCategories))
+            print(randomCategory)
+            self.categoryName = value?[String(randomCategory)] as? String ?? ""
+            
+            print(self.categoryName)
+            print(self.categoryName)
+            self.lataaKysymysTietokannasta()
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
+    
     }
     
     
     func lataaKysymysTietokannasta(){
+
     //koodi joka lataa kysymyksen tietokanasta, sekä kysymykseen liitetyt väärät, sekä oikean vastauksen nappuloihin
     //TODO: nappuloita pitää sekoittaa.. nyt ensimmäisessä aina oikea vastaus!
-        ref?.child("Kysymykset").child("Elokuvat").child("kysymys1").observeSingleEvent(of: .value, with: { (snapshot) in
+        let numero:Int = 1
+        
+        print(self.categoryName)
+        print(self.categoryName)
+        ref?.child("Kysymykset").child(self.categoryName).child(String(numero)).observeSingleEvent(of: .value, with: { (snapshot) in
             
             let value = snapshot.value as? NSDictionary
             let kysymys = value?["question"] as? String ?? ""
