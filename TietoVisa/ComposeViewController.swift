@@ -23,7 +23,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var newSequenceNumber:Int = 0
     
-    var Array = ["jaakko","Elokuvat","marko"]
+    var Array = ["Avaruus", "Elokuvat","Historia","Maantiede","Ruoka","Tiede","Tietotekniikka","TV-Ohjelmat"]
     
     var ref:FIRDatabaseReference?
     
