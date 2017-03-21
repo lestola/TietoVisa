@@ -20,13 +20,22 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var verifyedLabel: UILabel!
     
+    var newSequenceNumber:Int = 0
+    
     var ref:FIRDatabaseReference?
     
         override func viewDidLoad() {
+            
+            
         super.viewDidLoad()
-
+        
+            //yhdistetään tietokantaan tekemällä ref
         ref = FIRDatabase.database().reference()
-        // Do any additional setup after loading the view.
+            
+        //haetaan kysymysten määrä teitokannasta
+        getNumberOfQuestions()
+            
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,19 +44,35 @@ class ComposeViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
+    func getNumberOfQuestions() {
+        
+        //haetaan kysymyksen numero tietokannasta ja asetetaan se muuttujaan newSequenceNumber
+        ref?.child("Kysymykset").child("Elokuvat").child("Data").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            let countOfQuestions = value?["Count"] as! Int
+            
+            self.newSequenceNumber = countOfQuestions
+            print("tämä asetetaan getnumeberissa:")
+            print(self.newSequenceNumber)
+            
+            // ...
+        }) { (error) in
+            print(error.localizedDescription)
+        }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
     }
-    */
     
     @IBAction func addPost(_ sender: Any) {
+        
         //lisätään kysymys tietokantaan
-        let key = ref?.child("Kysymykset").child("Elokuvat").childByAutoId().key
+        print("tämä ptäisi mennä tietokantaan:")
+        print(self.newSequenceNumber)
+        
+        //lisätään countterin muuttujaan yksi
+        self.newSequenceNumber += 1
+        let key = ref?.child("Kysymykset").child("Elokuvat").child(String(newSequenceNumber)).key
         let post = ["question": kysymysTextField.text,
                     "answer1": oikeaVastausTextField.text,
                     "answer2": vaaraVastaus1TextField.text,
@@ -57,6 +82,11 @@ class ComposeViewController: UIViewController {
                     "verifyed": verifyedLabel.text]
         let childUpdates = ["/Kysymykset/Elokuvat/\(key)": post]
         ref?.updateChildValues(childUpdates)
+        
+        //lisätään myös countterin tietokanta arvoon 1 jotta kysymysten määrä mätsää!!
+        
+        self.ref?.child("Kysymykset").child("Elokuvat").child("Data").setValue(["Count": self.newSequenceNumber])
+        
         
         //dismiss the pop over
         presentingViewController?.dismiss(animated: true, completion: nil)

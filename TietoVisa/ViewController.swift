@@ -36,7 +36,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //alkuperäinen
         //databaseHandle = ref?.child("Kysymykset").child("Elokuvat").child("kysymys1").observe(.childAdded, with: { (snapshot) in
             
-        databaseHandle = ref?.child("Kysymykset").child("Elokuvat").observe(.value, with: { (snapshot) in
+        databaseHandle = ref?.child("/Kysymykset/Elokuvat/").observe(.value, with: { (snapshot) in
+            
+            /*firebase.database().ref('/data/?shallow=true').once('value', function(snapshot) {
+                // do something with snapshot
+            }*/
             
             // code to execute when a child is added under "posts"
             // take the value frmom the snapshot and added it to the post data array

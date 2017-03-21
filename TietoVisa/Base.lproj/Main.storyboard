@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="UVd-F5-7Bs">
-    <device id="retina3_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,18 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hW8-t3-x7r">
-                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" id="NNB-SI-efw">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NNB-SI-efw" id="oZk-lc-2Jp">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -94,11 +94,11 @@
                         <viewControllerLayoutGuide type="bottom" id="iqh-w5-ov0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SHv-us-3XO">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToU-7B-xDv">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Lisää kysymys" id="Bg7-J1-Xus">
                                         <barButtonItem key="leftBarButtonItem" systemItem="trash" id="jNL-GA-6Ve">
@@ -115,7 +115,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85J-jZ-oTR" userLabel="kysymys">
-                                <rect key="frame" x="16" y="95" width="288" height="60"/>
+                                <rect key="frame" x="16" y="95" width="343" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TCT-MQ-UGK"/>
                                 </constraints>
@@ -124,71 +124,74 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGX-b4-I4T" userLabel="oikeaVastaus">
-                                <rect key="frame" x="16" y="186" width="288" height="30"/>
+                                <rect key="frame" x="16" y="186" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gx7-ee-e72" userLabel="vaaraVastaus1">
-                                <rect key="frame" x="16" y="247" width="288" height="30"/>
+                                <rect key="frame" x="16" y="247" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d7H-bO-qyk" userLabel="vaaraVastaus2">
-                                <rect key="frame" x="16" y="308" width="288" height="30"/>
+                                <rect key="frame" x="16" y="308" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXI-29-ZiX" userLabel="vaaraVastaus4">
-                                <rect key="frame" x="16" y="369" width="288" height="30"/>
+                                <rect key="frame" x="16" y="369" width="343" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kysymys:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W08-iw-fWS">
-                                <rect key="frame" x="16" y="69" width="288" height="21"/>
+                                <rect key="frame" x="16" y="69" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oikea vastaus:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-xH-2fs">
-                                <rect key="frame" x="16" y="160" width="288" height="21"/>
+                                <rect key="frame" x="16" y="160" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Väärä vastaus 1:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krT-if-sKC">
-                                <rect key="frame" x="16" y="221" width="288" height="21"/>
+                                <rect key="frame" x="16" y="221" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Väärä vastaus 2:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JM6-Ht-d5Z">
-                                <rect key="frame" x="16" y="282" width="288" height="21"/>
+                                <rect key="frame" x="16" y="282" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Väärä vastaus 3:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLi-Uy-MtM">
-                                <rect key="frame" x="16" y="343" width="288" height="21"/>
+                                <rect key="frame" x="16" y="343" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sini" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccp-CS-mAt">
-                                <rect key="frame" x="21" y="404" width="278" height="21"/>
+                                <rect key="frame" x="21" y="404" width="333" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="true" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-4o-5Tf">
-                                <rect key="frame" x="16" y="430" width="288" height="21"/>
+                                <rect key="frame" x="16" y="430" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jX-ch-dpW" userLabel="kategoriaValikko">
+                                <rect key="frame" x="16" y="456" width="343" height="216"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -209,11 +212,14 @@
                             <constraint firstItem="85J-jZ-oTR" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="Lgk-bb-tEV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qsw-4o-5Tf" secondAttribute="trailing" id="Lgv-ej-KnU"/>
                             <constraint firstItem="WXI-29-ZiX" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="LiX-Zb-eg7"/>
-                            <constraint firstItem="yaj-xH-2fs" firstAttribute="top" secondItem="85J-jZ-oTR" secondAttribute="bottom" constant="5" id="MwD-3L-zwM"/>
+                            <constraint firstItem="yaj-xH-2fs" firstAttribute="top" secondItem="85J-jZ-oTR" secondAttribute="bottom" constant="5" id="Nmd-dh-slA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="85J-jZ-oTR" secondAttribute="trailing" id="Pow-25-q4X"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WXI-29-ZiX" secondAttribute="trailing" id="QXX-4D-HWY"/>
+                            <constraint firstItem="9jX-ch-dpW" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="TUj-Uz-6o2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9jX-ch-dpW" secondAttribute="trailing" id="Vxn-dk-fiz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W08-iw-fWS" secondAttribute="trailing" id="WZD-Bh-9cl"/>
                             <constraint firstItem="d7H-bO-qyk" firstAttribute="top" secondItem="JM6-Ht-d5Z" secondAttribute="bottom" constant="5" id="Wvj-ET-haj"/>
+                            <constraint firstItem="9jX-ch-dpW" firstAttribute="top" secondItem="qsw-4o-5Tf" secondAttribute="bottom" constant="5" id="Y9o-Ik-59b"/>
                             <constraint firstItem="yaj-xH-2fs" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="YQN-ej-ll8"/>
                             <constraint firstItem="Gx7-ee-e72" firstAttribute="leading" secondItem="SHv-us-3XO" secondAttribute="leadingMargin" id="Zv2-sd-fxt"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WLi-Uy-MtM" secondAttribute="trailing" id="ajQ-yG-Bk4"/>
@@ -351,7 +357,7 @@
                         <viewControllerLayoutGuide type="bottom" id="XwS-Q8-noD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DiR-lT-uTe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
