@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseDatabase
 
-class ComposeViewController: UIViewController {
+class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var kysymysTextField: UITextField!
@@ -19,10 +19,16 @@ class ComposeViewController: UIViewController {
     @IBOutlet weak var vaaraVastaus3TextField: UITextField!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var verifyedLabel: UILabel!
+    @IBOutlet weak var Picker1: UIPickerView!
     
     var newSequenceNumber:Int = 0
     
+    var Array = ["jaakko","Elokuvat","marko"]
+    
     var ref:FIRDatabaseReference?
+    
+    var valittuKategoria:String = ""
+    
     
         override func viewDidLoad() {
             
@@ -35,7 +41,9 @@ class ComposeViewController: UIViewController {
         //haetaan kysymysten määrä teitokannasta
         getNumberOfQuestions()
             
-        
+        //pickerView dataSourcen ja delegaten määrittely, lähteenä itsensä
+        Picker1.delegate = self
+        Picker1.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,7 +80,7 @@ class ComposeViewController: UIViewController {
         
         //lisätään countterin muuttujaan yksi
         self.newSequenceNumber += 1
-        let key = ref?.child("Kysymykset").child("Elokuvat").child(String(newSequenceNumber)).key
+        let key = ref?.child("Kysymykset").child(valittuKategoria).child(String(newSequenceNumber)).key
         let post = ["question": kysymysTextField.text,
                     "answer1": oikeaVastausTextField.text,
                     "answer2": vaaraVastaus1TextField.text,
@@ -95,5 +103,21 @@ class ComposeViewController: UIViewController {
 
     @IBAction func cancelPost(_ sender: Any) {
         presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return Array[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return Array.count
+    }
+    
+    public func numberOfComponents(in pickerView: UIPickerView) -> Int{
+        
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        valittuKategoria = Array[row]
+        
     }
 }

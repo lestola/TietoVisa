@@ -191,6 +191,9 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jX-ch-dpW" userLabel="kategoriaValikko">
                                 <rect key="frame" x="16" y="456" width="343" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tm8-pJ-PDo" id="Sca-qZ-6ZV"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -240,6 +243,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="Picker1" destination="9jX-ch-dpW" id="y4p-Nt-pdO"/>
                         <outlet property="kysymysTextField" destination="85J-jZ-oTR" id="mQc-h3-cMr"/>
                         <outlet property="oikeaVastausTextField" destination="fGX-b4-I4T" id="KBM-1R-tTS"/>
                         <outlet property="userLabel" destination="Ccp-CS-mAt" id="lUv-0I-hWI"/>
