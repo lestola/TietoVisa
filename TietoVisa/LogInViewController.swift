@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import CoreData
 
 class LogInViewController: UIViewController  {
     
@@ -21,6 +22,26 @@ class LogInViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //kirjaudutaan sisään tunnuksilla jos ne on aikaisemmin syötetty
+        if let email = UserDefaults.standard.object(forKey: "savedEmail") as? String, let pass = UserDefaults.standard.object(forKey: "savedPassword") as? String
+        {
+                FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
+                    //katsotaan ettei user ole tyhjä
+                    if let u = user {
+                        //käyttäjä löydetty, mene kotisivulle
+                        UserDefaults.standard.set(self.emailTextField.text, forKey: "savedEmail")
+                        self.performSegue(withIdentifier: "goToHome", sender: self)
+                    }
+                    else{
+                        //virhe, tarkista virhe ja näytä viesti
+                        
+                    }
+                })
+            
+
+        }
+    
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,6 +78,8 @@ class LogInViewController: UIViewController  {
                     //katsotaan ettei user ole tyhjä
                     if let u = user {
                         //käyttäjä löydetty, mene kotisivulle
+                        UserDefaults.standard.set(self.emailTextField.text, forKey: "savedEmail")
+                        UserDefaults.standard.set(self.passwordTextField.text, forKey: "savedPassword")
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     }
                     else{
@@ -73,6 +96,8 @@ class LogInViewController: UIViewController  {
                     //tarkistetaan ettei käyttäjänimi ole tyhjä
                     if let u = user {
                         //käyttäjä löytyi.. mennään kotisivulle
+                        UserDefaults.standard.set(self.emailTextField.text, forKey: "savedEmail")
+                        UserDefaults.standard.set(self.passwordTextField.text, forKey: "savedPassword")
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     }
                     else{
