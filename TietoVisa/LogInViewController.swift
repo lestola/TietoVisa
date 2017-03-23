@@ -1,0 +1,111 @@
+//
+//  LogInViewController.swift
+//  TietoVisa
+//
+//  Created by Marko Lehtola on 23.3.2017.
+//  Copyright © 2017 Marko Lehtola. All rights reserved.
+//
+
+import UIKit
+import Foundation
+import FirebaseDatabase
+import FirebaseAuth
+
+class LogInViewController: UIViewController  {
+    
+    @IBOutlet weak var signInSelector: UISegmentedControl!
+    @IBOutlet weak var signInLabel: UILabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var signInButton: UIButton!
+    
+    var isSignIn:Bool = true
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //set the firebase reference
+        //ref =  FIRDatabase.database().reference()
+        
+        
+        //retrieve the post and listen for changes
+        //alkuperäinen
+        //databaseHandle = ref?.child("Kysymykset").child("Elokuvat").child("kysymys1").observe(.childAdded, with: { (snapshot) in
+        
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    
+    @IBAction func signInSelectorChanged(_ sender: UISegmentedControl) {
+        //Flipataan booleania
+        isSignIn = !isSignIn
+        
+        //chekkaa nappula ja muuta nappuloitten ja labeleitten asetukset
+        if isSignIn{
+            signInLabel.text = "Kirjaudu"
+            signInButton.setTitle("Kirjaudu sisään", for: .normal)
+        }
+        else{
+            signInLabel.text = "Rekisteröidy"
+            signInButton.setTitle("Rekisteröidy", for: .normal)
+        }
+        
+    }
+    @IBAction func signInButtonTapped(_ sender: UIButton) {
+        
+        //TODO: tarkistetaan onko salasana ja tunnus tekstit tyhjiä
+        
+        if let email = emailTextField.text, let pass = passwordTextField.text{
+            
+            // tsekataan onko kirjautudttu sisään, vai reksiteröidystäänkö=
+            if isSignIn{
+                //kirjaudutaan sisään
+                FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
+                    //katsotaan ettei user ole tyhjä
+                    if let u = user {
+                        //käyttäjä löydetty, mene kotisivulle
+                        self.performSegue(withIdentifier: "goToHome", sender: self)
+                    }
+                    else{
+                        //virhe, tarkista virhe ja näytä viesti
+                        
+                    }
+                })
+            }
+            else{
+                //rekisteröidytään firebaseen
+                
+                FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
+                    
+                    //tarkistetaan ettei käyttäjänimi ole tyhjä
+                    if let u = user {
+                        //käyttäjä löytyi.. mennään kotisivulle
+                        self.performSegue(withIdentifier: "goToHome", sender: self)
+                    }
+                    else{
+                        //error: näytä error viesti
+                    }
+                })
+            }
+
+            
+        }
+        
+        
+        
+        
+    }
+  
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        //Dismiss the keyboard when teh view is tapped on
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+    }
+    
+}
