@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
@@ -17,13 +18,13 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var vaaraVastaus1TextField: UITextField!
     @IBOutlet weak var vaaraVastaus2TextField: UITextField!
     @IBOutlet weak var vaaraVastaus3TextField: UITextField!
-    @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var verifyedLabel: UILabel!
     @IBOutlet weak var Picker1: UIPickerView!
     
     var newSequenceNumber:Int = 0
     var Array = ["Avaruus", "Elokuvat","Historia","Maantiede","Ruoka","Tiede","Tietotekniikka","TV-Ohjelmat"]
     var ref:FIRDatabaseReference?
+    let user = FIRAuth.auth()?.currentUser
     var valittuKategoria:String = ""
     
     
@@ -83,7 +84,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                     "answer2": vaaraVastaus1TextField.text,
                     "answer3": vaaraVastaus2TextField.text,
                     "answer4": vaaraVastaus3TextField.text,
-                    "addedby": userLabel.text,
+                    "addedby": user?.uid,
                     "unverifyed": verifyedLabel.text,
                     "reported" : verifyedLabel.text]
         
