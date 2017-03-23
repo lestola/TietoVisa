@@ -61,6 +61,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="hW8-t3-x7r" id="MbI-T9-KCA"/>
+                        <outlet property="usernameButton" destination="kp2-cG-oy1" id="T8s-Mp-ZsX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

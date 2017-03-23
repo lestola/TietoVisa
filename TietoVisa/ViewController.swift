@@ -12,6 +12,7 @@ import FirebaseDatabase
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var usernameButton: UIBarButtonItem!
     
     var ref:FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
@@ -22,6 +23,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if let x = UserDefaults.standard.object(forKey: "savedEmail") as? String
+         {
+         usernameButton.title = x
+         
+         }
+
         
         // Do any additional setup after loading the view, typically from a nib.
         
