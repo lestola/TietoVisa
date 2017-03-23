@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var ref:FIRDatabaseReference?
     var databaseHandle:FIRDatabaseHandle?
+    let user = FIRAuth.auth()?.currentUser
     
     
     var postData = [String]()
@@ -24,11 +26,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let x = UserDefaults.standard.object(forKey: "savedEmail") as? String
+        //TÄLLÄ SAA NÄKYMÄÄN EMAIL OSOITTEEN YLÄKULMASSA
+        /*if let x = UserDefaults.standard.object(forKey: "savedEmail") as? String
          {
          usernameButton.title = x
          
-         }
+         }*/
+        
+        //TÄLLÄ SAA NÄKYMÄÄN UID:N YLÄKULMASSA
+        
+        usernameButton.title = user?.uid
+        
+        
+        
+        
 
         
         // Do any additional setup after loading the view, typically from a nib.

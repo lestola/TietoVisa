@@ -30,7 +30,6 @@ class LogInViewController: UIViewController  {
                     //katsotaan ettei user ole tyhjä
                     if let u = user {
                         //käyttäjä löydetty, mene kotisivulle
-                        UserDefaults.standard.set(self.emailTextField.text, forKey: "savedEmail")
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     }
                     else{
