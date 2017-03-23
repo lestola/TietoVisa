@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import Foundation
-import FirebaseDatabase
 import FirebaseAuth
 
 class LogInViewController: UIViewController  {
@@ -23,21 +21,10 @@ class LogInViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //set the firebase reference
-        //ref =  FIRDatabase.database().reference()
-        
-        
-        //retrieve the post and listen for changes
-        //alkuperäinen
-        //databaseHandle = ref?.child("Kysymykset").child("Elokuvat").child("kysymys1").observe(.childAdded, with: { (snapshot) in
-        
-        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
@@ -61,7 +48,7 @@ class LogInViewController: UIViewController  {
         
         //TODO: tarkistetaan onko salasana ja tunnus tekstit tyhjiä
         
-        if let email = emailTextField.text, let pass = passwordTextField.text{
+        if let email = emailTextField.text, let pass = passwordTextField.text {
             
             // tsekataan onko kirjautudttu sisään, vai reksiteröidystäänkö=
             if isSignIn{
