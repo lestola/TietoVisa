@@ -5,7 +5,6 @@
 //  Created by Marko Lehtola on 16.3.2017.
 //  Copyright © 2017 Marko Lehtola. All rights reserved.
 //
-
 import UIKit
 import FirebaseDatabase
 
@@ -24,15 +23,12 @@ class GameScreenViewController: UIViewController  {
     var categoryName:String = ""
     var numberOfQuestion:Int = 0
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //yhdistetään tietokantaan
         ref = FIRDatabase.database().reference()
         //lähtään hakemaan kategorian nimeä
         getNameOfCategory()
-        
     }
     
     func getNumberOfQuestion(){
@@ -95,6 +91,7 @@ class GameScreenViewController: UIViewController  {
   
     
     @IBAction func vastaus1ButtonAction(_ sender: UIButton) {
+        
     }
     @IBAction func vastaus2ButtonAction(_ sender: UIButton) {
     }

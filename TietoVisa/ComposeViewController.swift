@@ -22,11 +22,8 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var Picker1: UIPickerView!
     
     var newSequenceNumber:Int = 0
-    
     var Array = ["Avaruus", "Elokuvat","Historia","Maantiede","Ruoka","Tiede","Tietotekniikka","TV-Ohjelmat"]
-    
     var ref:FIRDatabaseReference?
-    
     var valittuKategoria:String = ""
     
     
@@ -34,8 +31,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
             
         super.viewDidLoad()
-        
-            //yhdistetään tietokantaan tekemällä ref
+        //yhdistetään tietokantaan tekemällä ref
         ref = FIRDatabase.database().reference()
             
             

@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NNB-SI-efw" id="oZk-lc-2Jp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -289,14 +289,14 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSi-gI-ZO6">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="124"/>
-                                                <state key="normal" title="Vastaus 1"/>
+                                                <state key="normal" title="Vastaus 1" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus1ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="MAk-NQ-gb1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8I-dL-X44">
                                                 <rect key="frame" x="144" y="0.0" width="144" height="124"/>
-                                                <state key="normal" title="Vastaus 2"/>
+                                                <state key="normal" title="Vastaus 2" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus2ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="yaY-N6-3v2"/>
                                                 </connections>
@@ -308,14 +308,14 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="858-hp-Muh">
                                                 <rect key="frame" x="0.0" y="0.0" width="144" height="124"/>
-                                                <state key="normal" title="Vastaus 3"/>
+                                                <state key="normal" title="Vastaus 3" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus3ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="L7D-jC-MUM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI1-5F-spU">
                                                 <rect key="frame" x="144" y="0.0" width="144" height="124"/>
-                                                <state key="normal" title="Vastaus 4"/>
+                                                <state key="normal" title="Vastaus 4" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus4ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="pEK-WN-Ksy"/>
                                                 </connections>
@@ -350,12 +350,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Td-Rl-u3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="941" y="1514"/>
+            <point key="canvasLocation" x="898" y="1424"/>
         </scene>
-        <!--View Controller-->
+        <!--Score Screen View Controller-->
         <scene sceneID="20l-K7-K9U">
             <objects>
-                <viewController id="fWA-aJ-p2K" sceneMemberID="viewController">
+                <viewController id="fWA-aJ-p2K" customClass="ScoreScreenViewController" customModule="TietoVisa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZTn-Te-UT4"/>
                         <viewControllerLayoutGuide type="bottom" id="XwS-Q8-noD"/>
@@ -368,7 +368,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4f-yo-pZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="1514"/>
+            <point key="canvasLocation" x="1666" y="1508"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="2000px-HILLBLU_button_background" width="1000" height="500"/>
+    </resources>
 </document>
