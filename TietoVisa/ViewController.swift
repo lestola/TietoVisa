@@ -54,24 +54,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //retrieve the post and listen for changes
         //alkuperäinen
         //databaseHandle = ref?.child("Kysymykset").child("Elokuvat").child("kysymys1").observe(.childAdded, with: { (snapshot) in
+        
+        /*
+         databaseHandle = ref?.child("posts").observe(.childAdded, with: { (snapshot) in
+         
+         //kun lapsi lisätään posteihin
+         //ota arvo snapshotista ja laita se postDatataan
+         let post = snapshot.value as? String
+         
+         if let actualPost = post {
+         
+         //laita postidata sinne minnekuuluu eli post data arrayhin
+         self.postData.append(actualPost)
+         
+         //päivitä teblevievin sisältö
+         self.tableView.reloadData()
+         }
+ */
+        
+        databaseHandle = ref?.child("UserData").child((user?.uid)!).child("Games").observe(.childAdded, with: { (snapshot) in
             
-        databaseHandle = ref?.child("/Kysymykset/Elokuvat/").observe(.value, with: { (snapshot) in
-            
-            /*firebase.database().ref('/data/?shallow=true').once('value', function(snapshot) {
-                // do something with snapshot
-            }*/
-            
-            // code to execute when a child is added under "posts"
-            // take the value frmom the snapshot and added it to the post data array
-            //alkuperäinen
-            //let post = snapshot.value as? String
-            let post = snapshot.key as? String
+            ///kun lapsi lisätään posteihin
+            //ota arvo snapshotista ja laita se postDatataan
+            let post = snapshot.value as? String
             
             if let actualPost = post {
                 
-            self.postData.append(actualPost)
+                //laita postidata sinne minnekuuluu eli post data arrayhin
+                self.postData.append(actualPost)
                 
-            self.tableView.reloadData()
+                //päivitä teblevievin sisältö
+                self.tableView.reloadData()
             }
         })
         
