@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c9D-Tf-iGj">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,18 +19,18 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hW8-t3-x7r">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" id="NNB-SI-efw">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NNB-SI-efw" id="oZk-lc-2Jp">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -62,6 +62,7 @@
                     <connections>
                         <outlet property="tableView" destination="hW8-t3-x7r" id="MbI-T9-KCA"/>
                         <outlet property="usernameButton" destination="kp2-cG-oy1" id="T8s-Mp-ZsX"/>
+                        <segue destination="fWA-aJ-p2K" kind="show" identifier="scoreScreenSeque" id="orj-PE-38i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -95,11 +96,11 @@
                         <viewControllerLayoutGuide type="bottom" id="iqh-w5-ov0"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SHv-us-3XO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ToU-7B-xDv">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Lisää kysymys" id="Bg7-J1-Xus">
                                         <barButtonItem key="leftBarButtonItem" systemItem="trash" id="jNL-GA-6Ve">
@@ -116,7 +117,7 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="85J-jZ-oTR" userLabel="kysymys">
-                                <rect key="frame" x="16" y="95" width="343" height="60"/>
+                                <rect key="frame" x="20" y="95" width="374" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="TCT-MQ-UGK"/>
                                 </constraints>
@@ -125,67 +126,67 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fGX-b4-I4T" userLabel="oikeaVastaus">
-                                <rect key="frame" x="16" y="186" width="343" height="30"/>
+                                <rect key="frame" x="20" y="186" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gx7-ee-e72" userLabel="vaaraVastaus1">
-                                <rect key="frame" x="16" y="247" width="343" height="30"/>
+                                <rect key="frame" x="20" y="247" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d7H-bO-qyk" userLabel="vaaraVastaus2">
-                                <rect key="frame" x="16" y="308" width="343" height="30"/>
+                                <rect key="frame" x="20" y="308" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WXI-29-ZiX" userLabel="vaaraVastaus3">
-                                <rect key="frame" x="16" y="369" width="343" height="30"/>
+                                <rect key="frame" x="20" y="369" width="374" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kysymys:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W08-iw-fWS">
-                                <rect key="frame" x="16" y="69" width="343" height="21"/>
+                                <rect key="frame" x="20" y="69" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oikea vastaus:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yaj-xH-2fs">
-                                <rect key="frame" x="16" y="160" width="343" height="21"/>
+                                <rect key="frame" x="20" y="160" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Väärä vastaus 1:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krT-if-sKC">
-                                <rect key="frame" x="16" y="221" width="343" height="21"/>
+                                <rect key="frame" x="20" y="221" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Väärä vastaus 2:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JM6-Ht-d5Z">
-                                <rect key="frame" x="16" y="282" width="343" height="21"/>
+                                <rect key="frame" x="20" y="282" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Väärä vastaus 3:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WLi-Uy-MtM">
-                                <rect key="frame" x="16" y="343" width="343" height="21"/>
+                                <rect key="frame" x="20" y="343" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="false" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsw-4o-5Tf">
-                                <rect key="frame" x="16" y="404" width="343" height="21"/>
+                                <rect key="frame" x="20" y="404" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jX-ch-dpW" userLabel="kategoriaValikko">
-                                <rect key="frame" x="16" y="430" width="343" height="216"/>
+                                <rect key="frame" x="20" y="430" width="374" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="tm8-pJ-PDo" id="Sca-qZ-6ZV"/>
                                 </connections>
@@ -257,14 +258,14 @@
                         <viewControllerLayoutGuide type="bottom" id="ex5-Zx-bsg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sfe-YA-aHy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="yxg-mS-2cW">
-                                <rect key="frame" x="16" y="204.5" width="343" height="258.5"/>
+                                <rect key="frame" x="20" y="238.99999999999997" width="374" height="258.33333333333326"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="cep-iD-xeO">
-                                        <rect key="frame" x="65" y="0.0" width="213" height="29"/>
+                                        <rect key="frame" x="80.666666666666686" y="0.0" width="213" height="29"/>
                                         <segments>
                                             <segment title="Kirjaudu sisään"/>
                                             <segment title="Rekisteröidy"/>
@@ -274,13 +275,13 @@
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kirjaudu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y0e-Cd-jyN">
-                                        <rect key="frame" x="140" y="58" width="63" height="20.5"/>
+                                        <rect key="frame" x="155.66666666666666" y="58" width="62.666666666666686" height="20.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lw6-Ou-AaM">
-                                        <rect key="frame" x="0.0" y="108.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="108.33333333333331" width="374" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sähköposti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfr-CD-3b2">
                                                 <rect key="frame" x="0.0" y="0.0" width="85" height="30"/>
@@ -289,7 +290,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1tE-Qm-xiu">
-                                                <rect key="frame" x="90" y="0.0" width="253" height="30"/>
+                                                <rect key="frame" x="90" y="0.0" width="284" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -297,16 +298,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-Ar-EMy">
-                                        <rect key="frame" x="0.0" y="168.5" width="343" height="30"/>
+                                        <rect key="frame" x="0.0" y="168.33333333333331" width="374" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Salasana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNJ-CX-2Ja">
-                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="68.333333333333329" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h2m-ih-san">
-                                                <rect key="frame" x="88.5" y="0.0" width="254.5" height="30"/>
+                                                <rect key="frame" x="88.333333333333343" y="0.0" width="285.66666666666663" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -314,7 +315,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvK-mJ-XQU">
-                                        <rect key="frame" x="143" y="228.5" width="57" height="30"/>
+                                        <rect key="frame" x="158.66666666666666" y="228.33333333333331" width="57" height="30"/>
                                         <state key="normal" title="Kirjaudu"/>
                                         <connections>
                                             <action selector="signInButtonTapped:" destination="c9D-Tf-iGj" eventType="touchUpInside" id="ej7-YT-CA9"/>
@@ -361,7 +362,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tähän tulee esimerkkikysymys: kuten: monta autoa ajaa formula 1 kisoissa?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVV-Do-qVy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kysymys:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVV-Do-qVy">
                                 <rect key="frame" x="16" y="20" width="288" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="zFi-rE-PCM"/>
@@ -444,19 +445,19 @@
             </objects>
             <point key="canvasLocation" x="898" y="1466"/>
         </scene>
-        <!--Score Screen View Controller-->
+        <!--Score View Controller-->
         <scene sceneID="20l-K7-K9U">
             <objects>
-                <viewController id="fWA-aJ-p2K" customClass="ScoreScreenViewController" customModule="TietoVisa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fWA-aJ-p2K" customClass="ScoreViewController" customModule="TietoVisa" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZTn-Te-UT4"/>
                         <viewControllerLayoutGuide type="bottom" id="XwS-Q8-noD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DiR-lT-uTe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOJ-MY-UVZ">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qOJ-MY-UVZ" userLabel="Aihe 1">
                                 <rect key="frame" x="84" y="85" width="206" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -526,69 +527,69 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-UE-pUd">
-                                <rect key="frame" x="83" y="480" width="209" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVO-Si-cxZ" userLabel="Aihe 2">
+                                <rect key="frame" x="83" y="157" width="208" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5UG-j9-YK7" userLabel="p1 k6">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="q6A-5q-OTZ" userLabel="p1 k2">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNx-Ll-rgq">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJc-JK-mHG">
+                                                <rect key="frame" x="0.0" y="0.0" width="20.000000000000014" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="lz8-2d-XHJ"/>
-                                                    <constraint firstAttribute="height" constant="20" id="yTo-z0-aEY"/>
+                                                    <constraint firstAttribute="width" constant="20" id="8E9-Pv-zOe"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Mmp-Zy-Exo"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pK-8z-Q9L">
-                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsI-jt-rJR">
+                                                <rect key="frame" x="30.000000000000014" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="9R1-OQ-O6G"/>
-                                                    <constraint firstAttribute="width" constant="20" id="Tk8-Pb-MUT"/>
+                                                    <constraint firstAttribute="width" constant="20" id="7Js-CL-lIo"/>
+                                                    <constraint firstAttribute="height" constant="20" id="Uou-ST-RDK"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-fn-ury">
-                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48s-Ns-lPM">
+                                                <rect key="frame" x="60.000000000000014" y="0.0" width="19.999999999999986" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="Yei-6k-EgA"/>
-                                                    <constraint firstAttribute="width" constant="20" id="yPh-dI-At0"/>
+                                                    <constraint firstAttribute="width" constant="20" id="8C6-0i-aXf"/>
+                                                    <constraint firstAttribute="height" constant="20" id="a9i-f0-WnF"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-Wd-KXr">
-                                        <rect key="frame" x="80" y="0.0" width="49" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgn-Te-sjV">
+                                        <rect key="frame" x="80" y="0.0" width="48.333333333333343" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-lc-ufi" userLabel="p2 k6">
-                                        <rect key="frame" x="129" y="0.0" width="80" height="20"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QLR-4g-NsQ" userLabel="p2 k2">
+                                        <rect key="frame" x="128.33333333333334" y="0.0" width="80" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3W-ic-PaT">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLo-w8-gGn">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="iEP-dK-UCV"/>
-                                                    <constraint firstAttribute="width" constant="20" id="nn4-bx-C6b"/>
+                                                    <constraint firstAttribute="height" constant="20" id="R8J-1Q-blO"/>
+                                                    <constraint firstAttribute="width" constant="20" id="kfc-S7-YK8"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-bl-ed6">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZN-9K-q9c">
                                                 <rect key="frame" x="30" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="OOq-xT-uQG"/>
-                                                    <constraint firstAttribute="width" constant="20" id="T9V-YG-eE3"/>
+                                                    <constraint firstAttribute="width" constant="20" id="G5x-2k-n08"/>
+                                                    <constraint firstAttribute="height" constant="20" id="bCv-fO-fCc"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baM-a2-9fm">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIq-e7-2xY">
                                                 <rect key="frame" x="60" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="Rl3-cY-w3b"/>
-                                                    <constraint firstAttribute="height" constant="20" id="mDE-Bd-f2Q"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Jd6-MO-abi"/>
+                                                    <constraint firstAttribute="height" constant="20" id="nu2-lS-xRn"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
@@ -596,69 +597,69 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4L-Mo-t0I">
-                                <rect key="frame" x="83" y="406" width="209" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dO9-Wb-Zzh" userLabel="Aihe 3">
+                                <rect key="frame" x="83" y="242" width="209" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="das-RX-saV" userLabel="p1 k5">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4YU-Sa-vBo" userLabel="p1 k3">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJU-eO-ol7">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-I5-b7C">
+                                                <rect key="frame" x="0.0" y="0.0" width="19.999999999999986" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="5Ha-Na-MQV"/>
-                                                    <constraint firstAttribute="width" constant="20" id="d4t-6I-7nc"/>
+                                                    <constraint firstAttribute="height" constant="20" id="9JM-Zw-Pj8"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Gtk-Ef-mmn"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyN-b7-dhA">
-                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnD-Qs-S2i">
+                                                <rect key="frame" x="29.999999999999986" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="CLr-Qr-eTy"/>
-                                                    <constraint firstAttribute="height" constant="20" id="rMC-Lf-XSD"/>
+                                                    <constraint firstAttribute="height" constant="20" id="8NG-uR-PDL"/>
+                                                    <constraint firstAttribute="width" constant="20" id="fXA-jh-iDg"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHT-Lc-Z4Q">
-                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-W3-zzK">
+                                                <rect key="frame" x="59.999999999999986" y="0.0" width="20.000000000000014" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="9Pj-d8-rPt"/>
-                                                    <constraint firstAttribute="width" constant="20" id="NZ9-h0-m96"/>
+                                                    <constraint firstAttribute="width" constant="20" id="9Gc-xt-BFi"/>
+                                                    <constraint firstAttribute="height" constant="20" id="VLP-r9-Swn"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-yi-h9u">
-                                        <rect key="frame" x="80" y="0.0" width="48.5" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne9-Dt-oOk">
+                                        <rect key="frame" x="80" y="0.0" width="48.666666666666657" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-1Y-Sni" userLabel="p2 k5">
-                                        <rect key="frame" x="128.5" y="0.0" width="80" height="20"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="irU-5R-4uN" userLabel="p2 k3">
+                                        <rect key="frame" x="128.66666666666666" y="0.0" width="80" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gF-Ty-gU9">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-j6-5Ja">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="LDG-6u-i1K"/>
-                                                    <constraint firstAttribute="height" constant="20" id="aum-f8-mvM"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Q0p-z4-TDN"/>
+                                                    <constraint firstAttribute="height" constant="20" id="dwP-Cw-WFY"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmk-Rf-eEl">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-Xb-dDw">
                                                 <rect key="frame" x="30" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="Eg7-68-CI0"/>
-                                                    <constraint firstAttribute="width" constant="20" id="MEL-AY-oEB"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Qp7-km-iyb"/>
+                                                    <constraint firstAttribute="height" constant="20" id="rik-Ob-JMX"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83N-WM-fUd">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY7-aA-hMx">
                                                 <rect key="frame" x="60" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="0Ni-oL-SnH"/>
-                                                    <constraint firstAttribute="width" constant="20" id="lFU-WC-JdR"/>
+                                                    <constraint firstAttribute="height" constant="20" id="1Pb-8I-lar"/>
+                                                    <constraint firstAttribute="width" constant="20" id="zX4-PZ-Foe"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
@@ -666,7 +667,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYg-3d-QUn">
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vYg-3d-QUn" userLabel="Aihe 4">
                                 <rect key="frame" x="84" y="329" width="209" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -736,69 +737,139 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dO9-Wb-Zzh">
-                                <rect key="frame" x="83" y="242" width="209" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s4L-Mo-t0I" userLabel="Aihe 5">
+                                <rect key="frame" x="83" y="406" width="209" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4YU-Sa-vBo" userLabel="p1 k3">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="das-RX-saV" userLabel="p1 k5">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-I5-b7C">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJU-eO-ol7">
+                                                <rect key="frame" x="0.0" y="0.0" width="19.999999999999986" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="9JM-Zw-Pj8"/>
-                                                    <constraint firstAttribute="width" constant="20" id="Gtk-Ef-mmn"/>
+                                                    <constraint firstAttribute="height" constant="20" id="5Ha-Na-MQV"/>
+                                                    <constraint firstAttribute="width" constant="20" id="d4t-6I-7nc"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CnD-Qs-S2i">
-                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AyN-b7-dhA">
+                                                <rect key="frame" x="29.999999999999986" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="8NG-uR-PDL"/>
-                                                    <constraint firstAttribute="width" constant="20" id="fXA-jh-iDg"/>
+                                                    <constraint firstAttribute="width" constant="20" id="CLr-Qr-eTy"/>
+                                                    <constraint firstAttribute="height" constant="20" id="rMC-Lf-XSD"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uXp-W3-zzK">
-                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SHT-Lc-Z4Q">
+                                                <rect key="frame" x="59.999999999999986" y="0.0" width="20.000000000000014" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="9Gc-xt-BFi"/>
-                                                    <constraint firstAttribute="height" constant="20" id="VLP-r9-Swn"/>
+                                                    <constraint firstAttribute="height" constant="20" id="9Pj-d8-rPt"/>
+                                                    <constraint firstAttribute="width" constant="20" id="NZ9-h0-m96"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ne9-Dt-oOk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fR3-yi-h9u">
+                                        <rect key="frame" x="80" y="0.0" width="48.666666666666657" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BHF-1Y-Sni" userLabel="p2 k5">
+                                        <rect key="frame" x="128.66666666666666" y="0.0" width="80" height="20"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0gF-Ty-gU9">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="LDG-6u-i1K"/>
+                                                    <constraint firstAttribute="height" constant="20" id="aum-f8-mvM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xmk-Rf-eEl">
+                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Eg7-68-CI0"/>
+                                                    <constraint firstAttribute="width" constant="20" id="MEL-AY-oEB"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83N-WM-fUd">
+                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="0Ni-oL-SnH"/>
+                                                    <constraint firstAttribute="width" constant="20" id="lFU-WC-JdR"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iRd-UE-pUd" userLabel="Aihe 6">
+                                <rect key="frame" x="83" y="480" width="209" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5UG-j9-YK7" userLabel="p1 k6">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNx-Ll-rgq">
+                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="lz8-2d-XHJ"/>
+                                                    <constraint firstAttribute="height" constant="20" id="yTo-z0-aEY"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pK-8z-Q9L">
+                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="9R1-OQ-O6G"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Tk8-Pb-MUT"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MsI-fn-ury">
+                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="Yei-6k-EgA"/>
+                                                    <constraint firstAttribute="width" constant="20" id="yPh-dI-At0"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzl-Wd-KXr">
                                         <rect key="frame" x="80" y="0.0" width="49" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="irU-5R-4uN" userLabel="p2 k3">
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fL4-lc-ufi" userLabel="p2 k6">
                                         <rect key="frame" x="129" y="0.0" width="80" height="20"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3L0-j6-5Ja">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3W-ic-PaT">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="Q0p-z4-TDN"/>
-                                                    <constraint firstAttribute="height" constant="20" id="dwP-Cw-WFY"/>
+                                                    <constraint firstAttribute="height" constant="20" id="iEP-dK-UCV"/>
+                                                    <constraint firstAttribute="width" constant="20" id="nn4-bx-C6b"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MeK-Xb-dDw">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78Q-bl-ed6">
                                                 <rect key="frame" x="30" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="Qp7-km-iyb"/>
-                                                    <constraint firstAttribute="height" constant="20" id="rik-Ob-JMX"/>
+                                                    <constraint firstAttribute="height" constant="20" id="OOq-xT-uQG"/>
+                                                    <constraint firstAttribute="width" constant="20" id="T9V-YG-eE3"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY7-aA-hMx">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baM-a2-9fm">
                                                 <rect key="frame" x="60" y="0.0" width="20" height="20"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="1Pb-8I-lar"/>
-                                                    <constraint firstAttribute="width" constant="20" id="zX4-PZ-Foe"/>
+                                                    <constraint firstAttribute="width" constant="20" id="Rl3-cY-w3b"/>
+                                                    <constraint firstAttribute="height" constant="20" id="mDE-Bd-f2Q"/>
                                                 </constraints>
                                                 <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
                                             </button>
@@ -806,87 +877,27 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yVO-Si-cxZ">
-                                <rect key="frame" x="83" y="157" width="209" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pelinumero" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkW-8Z-Hvz">
+                                <rect key="frame" x="142" y="574" width="100" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="q6A-5q-OTZ" userLabel="p1 k2">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="20"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJc-JK-mHG">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="8E9-Pv-zOe"/>
-                                                    <constraint firstAttribute="height" constant="20" id="Mmp-Zy-Exo"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YsI-jt-rJR">
-                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="7Js-CL-lIo"/>
-                                                    <constraint firstAttribute="height" constant="20" id="Uou-ST-RDK"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48s-Ns-lPM">
-                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="8C6-0i-aXf"/>
-                                                    <constraint firstAttribute="height" constant="20" id="a9i-f0-WnF"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hgn-Te-sjV">
-                                        <rect key="frame" x="80" y="0.0" width="48.5" height="20"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QLR-4g-NsQ" userLabel="p2 k2">
-                                        <rect key="frame" x="128.5" y="0.0" width="80" height="20"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLo-w8-gGn">
-                                                <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="20" id="R8J-1Q-blO"/>
-                                                    <constraint firstAttribute="width" constant="20" id="kfc-S7-YK8"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZN-9K-q9c">
-                                                <rect key="frame" x="30" y="0.0" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="G5x-2k-n08"/>
-                                                    <constraint firstAttribute="height" constant="20" id="bCv-fO-fCc"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JIq-e7-2xY">
-                                                <rect key="frame" x="60" y="0.0" width="20" height="20"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="Jd6-MO-abi"/>
-                                                    <constraint firstAttribute="height" constant="20" id="nu2-lS-xRn"/>
-                                                </constraints>
-                                                <state key="normal" title="Button" image="Näyttökuva 2017-03-24 kello 13.14.07"/>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="peliNumero" destination="mkW-8Z-Hvz" id="cZt-ls-K6r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4f-yo-pZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535" y="1466"/>
+            <point key="canvasLocation" x="1621.7391304347827" y="1536.6847826086957"/>
         </scene>
     </scenes>
     <resources>
-        <image name="2000px-HILLBLU_button_background" width="1000" height="500"/>
+        <image name="2000px-HILLBLU_button_background" width="666" height="333"/>
         <image name="Näyttökuva 2017-03-24 kello 13.14.07" width="380" height="368"/>
     </resources>
 </document>

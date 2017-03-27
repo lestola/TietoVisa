@@ -126,4 +126,14 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         valittuKategoria = Array[row]
         
     }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        //Dismiss the keyboard when teh view is tapped on
+        kysymysTextField.resignFirstResponder()
+        oikeaVastausTextField.resignFirstResponder()
+        vaaraVastaus1TextField.resignFirstResponder()
+        vaaraVastaus2TextField.resignFirstResponder()
+        vaaraVastaus3TextField.resignFirstResponder()
+        
+    }
+
 }

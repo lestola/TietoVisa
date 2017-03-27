@@ -102,10 +102,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        
+        //tämäkin toimisi varmasti.. en ole jaksanut kokeilla.. yksinkertaisempi:
+        //let cell = UITableViewCell()
+        //cell.textLabel?.text = postData[indexPath.row]
+        //return cell
+        
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
         cell?.textLabel?.text = postData[indexPath.row]
         
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "scoreScreenSeque", sender: postData[indexPath.row])
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let guest = segue.destination as! ScoreViewController
+        guest.gameNumber = sender as! String
     }
 
 }
