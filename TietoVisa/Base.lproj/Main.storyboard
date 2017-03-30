@@ -55,7 +55,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="UX2-x8-M8P">
                             <connections>
-                                <segue destination="tm8-pJ-PDo" kind="presentation" id="MrE-95-9Zm"/>
+                                <segue destination="tm8-pJ-PDo" kind="presentation" identifier="addQuestionSegue" id="ixY-AD-pNd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

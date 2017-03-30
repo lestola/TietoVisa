@@ -121,9 +121,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let guest = segue.destination as! ScoreViewController
-        guest.gameNumber = sender as! String
+        //let guest : ScoreViewController = segue.destination as! ScoreViewController
+        //guest.gameNumber = sender as! String
+        
+        //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+            if segue.identifier == "scoreScreenSeque" {
+                let controller = segue.destination as! ScoreViewController
+                controller.gameNumber = sender as! String
+            } else if segue.identifier == "addQuestionSegue" {
+                let controller = segue.destination as! ComposeViewController
+                //controller.history = self.history
+            }
+        
+        
     }
+    
+    
 
 }
 
