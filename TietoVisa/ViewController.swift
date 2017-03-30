@@ -77,7 +77,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             ///kun lapsi lisätään posteihin
             //ota arvo snapshotista ja laita se postDatataan
             let post = snapshot.value as? String
-            
             if let actualPost = post {
                 
                 //laita postidata sinne minnekuuluu eli post data arrayhin
@@ -87,7 +86,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.tableView.reloadData()
             }
         })
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -101,13 +99,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        
+    
         //tämäkin toimisi varmasti.. en ole jaksanut kokeilla.. yksinkertaisempi:
         //let cell = UITableViewCell()
         //cell.textLabel?.text = postData[indexPath.row]
         //return cell
-        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
         cell?.textLabel?.text = postData[indexPath.row]
@@ -123,20 +119,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //let guest : ScoreViewController = segue.destination as! ScoreViewController
         //guest.gameNumber = sender as! String
-        
         //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
             if segue.identifier == "scoreScreenSeque" {
                 let controller = segue.destination as! ScoreViewController
                 controller.gameNumber = sender as! String
             } else if segue.identifier == "addQuestionSegue" {
-                let controller = segue.destination as! ComposeViewController
+                //let controller = segue.destination as! ComposeViewController
                 //controller.history = self.history
             }
-        
-        
     }
-    
-    
-
 }
 

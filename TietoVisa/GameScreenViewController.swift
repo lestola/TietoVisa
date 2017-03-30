@@ -17,11 +17,12 @@ class GameScreenViewController: UIViewController  {
     @IBOutlet weak var vastaus3Button: UIButton!
     @IBOutlet weak var vastaus4Button: UIButton!
   
-    var ref:FIRDatabaseReference?
+    
     //muutama laiton muuttuja
     var Array = [String]()
     var categoryName:String = ""
     var numberOfQuestion:Int = 0
+    var ref:FIRDatabaseReference?
     
     override func viewDidLoad() {
         super.viewDidLoad()
