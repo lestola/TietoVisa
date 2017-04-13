@@ -90,7 +90,6 @@ class GameScreenViewController: UIViewController  {
             }
     }
   
-    
     @IBAction func vastaus1ButtonAction(_ sender: UIButton) {
         
     }

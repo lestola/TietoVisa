@@ -92,6 +92,22 @@ class ScoreViewController: UIViewController {
             
             print(kierros)
             
+            if kierros == 0{
+                //alustetaan nappulat, jos ei aikaisemmin pelatttu
+                self.round1Button.setTitle("Pelaa", for: .normal)
+                self.round2Button.setTitle("(ei valmis)", for: .normal)
+                self.round3Button.setTitle("(ei valmis)", for: .normal)
+                self.round4Button.setTitle("(ei valmis)", for: .normal)
+                self.round5Button.setTitle("(ei valmis)", for: .normal)
+                self.round6Button.setTitle("(ei valmis)", for: .normal)
+                self.round7Button.setTitle("(ei valmis)", for: .normal)
+                self.round8Button.setTitle("(ei valmis)", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
+                
+            }
             
             if kierros >= 1 {
             self.roundScore1 = (value?["round1"] as? String)!
