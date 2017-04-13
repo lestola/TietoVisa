@@ -22,7 +22,7 @@ class ComposeViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     @IBOutlet weak var Picker1: UIPickerView!
     
     var newSequenceNumber:Int = 0
-    var Array = ["Avaruus", "Elokuvat","Historia","Maantiede","Ruoka","Tiede","Tekniikka","Tietotekniikka","TV-Ohjelmat"]
+    var Array = ["Avaruus", "Elokuvat","Historia","Luonto","Maantiede","Musiikki","Ruoka","Tiede","Tekniikka","Tietotekniikka","TV-Ohjelmat"]
     var ref:FIRDatabaseReference?
     let user = FIRAuth.auth()?.currentUser
     var valittuKategoria:String = ""

@@ -12,6 +12,7 @@
 		503F42C0FA18639EA32729AF /* Pods_TietoVisaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDFBE07E91E2062F3D2E1397 /* Pods_TietoVisaUITests.framework */; };
 		ADA19E101E83BC2B00F56CA2 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA19E0F1E83BC2B00F56CA2 /* LogInViewController.swift */; };
 		ADA19E501E84005800F56CA2 /* model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ADA19E4E1E84005800F56CA2 /* model.xcdatamodeld */; };
+		ADC841871E9F9AEA00282FE9 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC841861E9F9AEA00282FE9 /* CategoryViewController.swift */; };
 		ADD252741E71B5BC00EEC72D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252731E71B5BC00EEC72D /* AppDelegate.swift */; };
 		ADD252761E71B5BC00EEC72D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD252751E71B5BC00EEC72D /* ViewController.swift */; };
 		ADD252791E71B5BC00EEC72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADD252771E71B5BC00EEC72D /* Main.storyboard */; };
@@ -51,6 +52,7 @@
 		AD907D96AD71A57DB9549A5F /* Pods_TietoVisaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TietoVisaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA19E0F1E83BC2B00F56CA2 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		ADA19E4F1E84005800F56CA2 /* model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = model.xcdatamodel; sourceTree = "<group>"; };
+		ADC841861E9F9AEA00282FE9 /* CategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		ADD252701E71B5BC00EEC72D /* TietoVisa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TietoVisa.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD252731E71B5BC00EEC72D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD252751E71B5BC00EEC72D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				ADEB4B0A1E8952D80015138A /* ScoreViewController.swift */,
 				ADA19E0F1E83BC2B00F56CA2 /* LogInViewController.swift */,
 				ADD252771E71B5BC00EEC72D /* Main.storyboard */,
+				ADC841861E9F9AEA00282FE9 /* CategoryViewController.swift */,
 				ADD2527A1E71B5BC00EEC72D /* Assets.xcassets */,
 				ADD2527C1E71B5BC00EEC72D /* LaunchScreen.storyboard */,
 				ADD2527F1E71B5BC00EEC72D /* Info.plist */,
@@ -472,6 +475,7 @@
 				ADA19E501E84005800F56CA2 /* model.xcdatamodeld in Sources */,
 				ADD252761E71B5BC00EEC72D /* ViewController.swift in Sources */,
 				ADA19E101E83BC2B00F56CA2 /* LogInViewController.swift in Sources */,
+				ADC841871E9F9AEA00282FE9 /* CategoryViewController.swift in Sources */,
 				ADF7C9E91E7A79E7000014C1 /* GameScreenViewController.swift in Sources */,
 				ADD252741E71B5BC00EEC72D /* AppDelegate.swift in Sources */,
 				ADEB4B0B1E8952D80015138A /* ScoreViewController.swift in Sources */,

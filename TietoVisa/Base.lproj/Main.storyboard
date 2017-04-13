@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c9D-Tf-iGj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c9D-Tf-iGj">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -46,13 +46,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="r4L-F5-eZO">
-                        <barButtonItem key="leftBarButtonItem" title="New Game" id="kp2-cG-oy1">
-                            <connections>
-                                <segue destination="Ubw-Fi-qQX" kind="popoverPresentation" popoverAnchorBarButtonItem="kp2-cG-oy1" id="aZl-1B-MrJ">
-                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                </segue>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="New Game" id="kp2-cG-oy1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="UX2-x8-M8P">
                             <connections>
                                 <segue destination="tm8-pJ-PDo" kind="presentation" identifier="addQuestionSegue" id="ixY-AD-pNd"/>
@@ -67,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="942" y="793"/>
+            <point key="canvasLocation" x="648" y="792"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3iM-ag-IGr">
@@ -85,7 +79,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rN-I9-Ox2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10" y="793"/>
+            <point key="canvasLocation" x="-62" y="792"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="Dk9-Q2-aWK">
@@ -247,7 +241,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Yg-wE-Jvk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="793"/>
+            <point key="canvasLocation" x="1420" y="470"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="bcy-gK-qYI">
@@ -359,11 +353,11 @@
                         <viewControllerLayoutGuide type="bottom" id="bvd-yV-0o9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7n8-h0-EJl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kysymys:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVV-Do-qVy">
-                                <rect key="frame" x="16" y="20" width="288" height="200"/>
+                                <rect key="frame" x="20" y="20" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="zFi-rE-PCM"/>
                                 </constraints>
@@ -372,23 +366,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kQG-M8-fYk">
-                                <rect key="frame" x="16" y="225" width="288" height="2"/>
+                                <rect key="frame" x="20" y="225" width="374" height="2"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="boB-QH-Lfz">
-                                <rect key="frame" x="16" y="232" width="288" height="248"/>
+                                <rect key="frame" x="20" y="232" width="374" height="504"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Hq-Vz-09d">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="124"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="252"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSi-gI-ZO6">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="124"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="252"/>
                                                 <state key="normal" title="Vastaus 1" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus1ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="MAk-NQ-gb1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8I-dL-X44">
-                                                <rect key="frame" x="144" y="0.0" width="144" height="124"/>
+                                                <rect key="frame" x="187" y="0.0" width="187" height="252"/>
                                                 <state key="normal" title="Vastaus 2" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus2ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="yaY-N6-3v2"/>
@@ -397,17 +391,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-cC-6Aj">
-                                        <rect key="frame" x="0.0" y="124" width="288" height="124"/>
+                                        <rect key="frame" x="0.0" y="252" width="374" height="252"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="858-hp-Muh">
-                                                <rect key="frame" x="0.0" y="0.0" width="144" height="124"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="252"/>
                                                 <state key="normal" title="Vastaus 3" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus3ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="L7D-jC-MUM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI1-5F-spU">
-                                                <rect key="frame" x="144" y="0.0" width="144" height="124"/>
+                                                <rect key="frame" x="187" y="0.0" width="187" height="252"/>
                                                 <state key="normal" title="Vastaus 4" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus4ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="pEK-WN-Ksy"/>
@@ -443,7 +437,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Td-Rl-u3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="898" y="1466"/>
+            <point key="canvasLocation" x="2806" y="1127"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="20l-K7-K9U">
@@ -496,6 +490,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmd-Zs-h3I">
                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="30"/>
                                                 <state key="normal" title="Kierros 1"/>
+                                                <connections>
+                                                    <action selector="round1ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="7UP-4c-EM3"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kjr-a4-AB4">
                                                 <rect key="frame" x="85" y="0.0" width="46" height="30"/>
@@ -506,6 +503,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ef-ty-zQS">
                                                 <rect key="frame" x="156" y="0.0" width="68" height="30"/>
                                                 <state key="normal" title="Kierros 1"/>
+                                                <connections>
+                                                    <action selector="round2ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="7ru-Tl-tIa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -513,18 +513,24 @@
                                         <rect key="frame" x="0.0" y="90.333333333333343" width="224" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nPd-Td-hYg">
-                                                <rect key="frame" x="0.0" y="0.0" width="63.666666666666657" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
                                                 <state key="normal" title="Kierros 2"/>
+                                                <connections>
+                                                    <action selector="round3ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="ZyS-hW-jDL"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3u-Zb-FYC">
-                                                <rect key="frame" x="88.666666666666657" y="0.0" width="48.333333333333343" height="30"/>
+                                                <rect key="frame" x="87" y="0.0" width="48.333333333333343" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhT-XZ-mJU">
-                                                <rect key="frame" x="162" y="0.0" width="62" height="30"/>
+                                                <rect key="frame" x="160.33333333333337" y="0.0" width="63.666666666666657" height="30"/>
                                                 <state key="normal" title="Kierros 2"/>
+                                                <connections>
+                                                    <action selector="round4ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="mH0-Md-2pn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -534,6 +540,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sMa-Mw-7PC">
                                                 <rect key="frame" x="0.0" y="0.0" width="62" height="29.999999999999972"/>
                                                 <state key="normal" title="Kierros 3"/>
+                                                <connections>
+                                                    <action selector="round5ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="yGt-1j-hKs"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n50-i0-i11">
                                                 <rect key="frame" x="87" y="0.0" width="48.666666666666657" height="29.999999999999972"/>
@@ -544,6 +553,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0a-7H-Zhq">
                                                 <rect key="frame" x="160.66666666666663" y="0.0" width="63.333333333333343" height="29.999999999999972"/>
                                                 <state key="normal" title="Kierros 3"/>
+                                                <connections>
+                                                    <action selector="round6ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="Ky2-6X-BbM"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -553,6 +565,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ClN-rc-qgw">
                                                 <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
                                                 <state key="normal" title="Kierros 4"/>
+                                                <connections>
+                                                    <action selector="round7ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="4Jb-GY-aCY"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n6K-6m-Y7x">
                                                 <rect key="frame" x="87" y="0.0" width="49" height="30"/>
@@ -563,6 +578,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lZZ-Gj-FHU">
                                                 <rect key="frame" x="161" y="0.0" width="63" height="30"/>
                                                 <state key="normal" title="Kierros 4"/>
+                                                <connections>
+                                                    <action selector="round8ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="vAC-TY-wtf"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -570,18 +588,24 @@
                                         <rect key="frame" x="0.0" y="240.33333333333331" width="224" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sSp-Qj-57m">
-                                                <rect key="frame" x="0.0" y="0.0" width="62" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="63.333333333333343" height="30"/>
                                                 <state key="normal" title="Kierros 5"/>
+                                                <connections>
+                                                    <action selector="round9ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="znr-50-FN6"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5a-EP-hzJ">
-                                                <rect key="frame" x="87" y="0.0" width="48.666666666666657" height="30"/>
+                                                <rect key="frame" x="88.333333333333343" y="0.0" width="48.666666666666657" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PAN-oW-LeW">
-                                                <rect key="frame" x="160.66666666666663" y="0.0" width="63.333333333333343" height="30"/>
+                                                <rect key="frame" x="162" y="0.0" width="62" height="30"/>
                                                 <state key="normal" title="Kierros 5"/>
+                                                <connections>
+                                                    <action selector="round10ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="so7-3D-EXw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -591,6 +615,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uN7-YQ-Vo5">
                                                 <rect key="frame" x="0.0" y="0.0" width="63" height="30"/>
                                                 <state key="normal" title="Kierros 6"/>
+                                                <connections>
+                                                    <action selector="round11ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="kui-gv-Ocx"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aihe 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruO-Kj-Fzm">
                                                 <rect key="frame" x="88" y="0.0" width="49" height="30"/>
@@ -601,6 +628,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="het-Hs-ish">
                                                 <rect key="frame" x="162" y="0.0" width="62" height="30"/>
                                                 <state key="normal" title="Kierros 6"/>
+                                                <connections>
+                                                    <action selector="round12ButtonAction:" destination="fWA-aJ-p2K" eventType="touchUpInside" id="GgT-BG-tQR"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -628,11 +658,83 @@
                         <outlet property="round7Button" destination="ClN-rc-qgw" id="CNF-UO-bON"/>
                         <outlet property="round8Button" destination="lZZ-Gj-FHU" id="0JB-TT-G7G"/>
                         <outlet property="round9Button" destination="sSp-Qj-57m" id="peZ-Bp-qPL"/>
+                        <outlet property="topic1Label" destination="Kjr-a4-AB4" id="0B4-sX-O2v"/>
+                        <outlet property="topic2Label" destination="a3u-Zb-FYC" id="6R6-kT-YOv"/>
+                        <outlet property="topic3Label" destination="n50-i0-i11" id="MTD-Or-h6Q"/>
+                        <outlet property="topic4Label" destination="n6K-6m-Y7x" id="8Ah-Vp-OW0"/>
+                        <outlet property="topic5Label" destination="L5a-EP-hzJ" id="Wk9-QK-ds7"/>
+                        <outlet property="topic6Label" destination="ruO-Kj-Fzm" id="haC-Es-Wii"/>
+                        <segue destination="LTE-Nz-cc6" kind="show" identifier="showCategorySegue" id="IGw-b8-YYr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4f-yo-pZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="1501"/>
+            <point key="canvasLocation" x="1419" y="1127"/>
+        </scene>
+        <!--Category View Controller-->
+        <scene sceneID="DlI-hd-jN5">
+            <objects>
+                <viewController id="LTE-Nz-cc6" customClass="CategoryViewController" customModule="TietoVisa" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tpx-nA-gFJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z0C-E4-YIC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ssk-Uk-diG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fm6-kM-bFa">
+                                <rect key="frame" x="20" y="64" width="374" height="672"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valitse kysymysten kategoria" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1G-hy-xlx">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="168"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TN9-hf-sOc">
+                                        <rect key="frame" x="0.0" y="168" width="374" height="168"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="firstButtonAction:" destination="LTE-Nz-cc6" eventType="touchUpInside" id="pvY-oZ-fjj"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehe-AO-iGi">
+                                        <rect key="frame" x="0.0" y="336" width="374" height="168"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="secondButtonAction:" destination="LTE-Nz-cc6" eventType="touchUpInside" id="59a-ym-hwd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdO-J4-rSf">
+                                        <rect key="frame" x="0.0" y="504" width="374" height="168"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="thirdButtonAction:" destination="LTE-Nz-cc6" eventType="touchUpInside" id="QFw-I2-WH5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fm6-kM-bFa" firstAttribute="leading" secondItem="ssk-Uk-diG" secondAttribute="leadingMargin" id="7UY-OQ-uYY"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fm6-kM-bFa" secondAttribute="trailing" id="QKc-IG-m2j"/>
+                            <constraint firstItem="Z0C-E4-YIC" firstAttribute="top" secondItem="fm6-kM-bFa" secondAttribute="bottom" id="nEd-XM-txv"/>
+                            <constraint firstItem="fm6-kM-bFa" firstAttribute="top" secondItem="tpx-nA-gFJ" secondAttribute="bottom" id="x22-eV-dwl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="firstButton" destination="TN9-hf-sOc" id="8tQ-We-niw"/>
+                        <outlet property="infoTextLabel" destination="V1G-hy-xlx" id="ksL-Wu-izt"/>
+                        <outlet property="secondButton" destination="ehe-AO-iGi" id="OJ1-KL-gsd"/>
+                        <outlet property="thirdButton" destination="XdO-J4-rSf" id="YUr-4L-KJi"/>
+                        <segue destination="Ubw-Fi-qQX" kind="show" identifier="showQuestionSegue" id="ioF-hB-Zkh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gec-2c-qwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2130" y="1128"/>
         </scene>
     </scenes>
     <resources>
