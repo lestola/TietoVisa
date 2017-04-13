@@ -29,7 +29,7 @@ class GameScreenViewController: UIViewController  {
         //yhdistetään tietokantaan
         ref = FIRDatabase.database().reference()
         //lähtään hakemaan kategorian nimeä
-        getNameOfCategory()
+        getNumberOfQuestion()
     }
     
     func getNumberOfQuestion(){
@@ -48,7 +48,7 @@ class GameScreenViewController: UIViewController  {
         }
     }
     
-    func getNameOfCategory(){
+   /* func getNameOfCategory(){
         //arvotaan kategoria ja valitaan sen muuttujaan
         ref?.child("Data").child("Kategoriat").observeSingleEvent(of: .value, with: { (snapshot) in
         
@@ -62,7 +62,7 @@ class GameScreenViewController: UIViewController  {
         }) { (error) in
             print(error.localizedDescription)
         }
-    }
+    }*/
     
     func lataaKysymysTietokannasta(){
     //koodi joka lataa kysymyksen tietokanasta, sekä kysymykseen liitetyt väärät, sekä oikean vastauksen nappuloihin

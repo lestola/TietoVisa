@@ -93,6 +93,9 @@ class CategoryViewController: UIViewController {
         if numberOfCategoryToChoose == 6{
             dataBaseHandle?.child("topic6").setValue(button)
         }
+        //siirrytään kysymysten pariin
+        performSegue(withIdentifier: "showQuestionSegue", sender: button)
+        
     }
     @IBAction func secondButtonAction(_ sender: UIButton) {
         let dataBaseHandle = self.ref?.child("Games").child(gameNumber)
@@ -116,6 +119,8 @@ class CategoryViewController: UIViewController {
         if numberOfCategoryToChoose == 6{
             dataBaseHandle?.child("topic6").setValue(button)
         }
+        //siirrytään kysymysten pariin
+        performSegue(withIdentifier: "showQuestionSegue", sender: button)
     }
     @IBAction func thirdButtonAction(_ sender: UIButton) {
         let dataBaseHandle = self.ref?.child("Games").child(gameNumber)
@@ -139,7 +144,24 @@ class CategoryViewController: UIViewController {
         if numberOfCategoryToChoose == 6{
             dataBaseHandle?.child("topic6").setValue(button)
         }
+        //siirrytään kysymysten pariin
+        performSegue(withIdentifier: "showQuestionSegue", sender: button)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //let guest : ScoreViewController = segue.destination as! ScoreViewController
+        //guest.gameNumber = sender as! String
+        //override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showQuestionSegue" {
+            let controller = segue.destination as! GameScreenViewController
+            controller.categoryName = sender as! String
+            
+        } else if segue.identifier == "addQuestionSegue" {
+            //let controller = segue.destination as! ComposeViewController
+            //controller.history = self.history
+        }
+    }
+
     
 
 }
