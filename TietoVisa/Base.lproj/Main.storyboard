@@ -357,7 +357,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kysymys:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVV-Do-qVy">
-                                <rect key="frame" x="20" y="20" width="374" height="200"/>
+                                <rect key="frame" x="20" y="64" width="374" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="zFi-rE-PCM"/>
                                 </constraints>
@@ -366,23 +366,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="kQG-M8-fYk">
-                                <rect key="frame" x="20" y="225" width="374" height="2"/>
+                                <rect key="frame" x="20" y="269" width="374" height="2"/>
                             </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="boB-QH-Lfz">
-                                <rect key="frame" x="20" y="232" width="374" height="504"/>
+                                <rect key="frame" x="20" y="276" width="374" height="460"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1Hq-Vz-09d">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="252"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="230"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSi-gI-ZO6">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="252"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="230"/>
                                                 <state key="normal" title="Vastaus 1" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus1ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="MAk-NQ-gb1"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8I-dL-X44">
-                                                <rect key="frame" x="187" y="0.0" width="187" height="252"/>
+                                                <rect key="frame" x="187" y="0.0" width="187" height="230"/>
                                                 <state key="normal" title="Vastaus 2" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus2ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="yaY-N6-3v2"/>
@@ -391,17 +391,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dgl-cC-6Aj">
-                                        <rect key="frame" x="0.0" y="252" width="374" height="252"/>
+                                        <rect key="frame" x="0.0" y="230" width="374" height="230"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="858-hp-Muh">
-                                                <rect key="frame" x="0.0" y="0.0" width="187" height="252"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="230"/>
                                                 <state key="normal" title="Vastaus 3" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus3ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="L7D-jC-MUM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI1-5F-spU">
-                                                <rect key="frame" x="187" y="0.0" width="187" height="252"/>
+                                                <rect key="frame" x="187" y="0.0" width="187" height="230"/>
                                                 <state key="normal" title="Vastaus 4" backgroundImage="2000px-HILLBLU_button_background"/>
                                                 <connections>
                                                     <action selector="vastaus4ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="pEK-WN-Ksy"/>
