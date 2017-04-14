@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hW8-t3-x7r">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostCell" id="NNB-SI-efw">
@@ -376,7 +376,9 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tSi-gI-ZO6">
                                                 <rect key="frame" x="0.0" y="0.0" width="187" height="230"/>
-                                                <state key="normal" title="Vastaus 1" backgroundImage="2000px-HILLBLU_button_background"/>
+                                                <state key="normal" title="Vastaus 1" backgroundImage="2000px-HILLBLU_button_background">
+                                                    <color key="titleShadowColor" red="0.23768877429999999" green="0.92760823179999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="vastaus1ButtonAction:" destination="Ubw-Fi-qQX" eventType="touchUpInside" id="MAk-NQ-gb1"/>
                                                 </connections>
@@ -433,11 +435,12 @@
                         <outlet property="vastaus2Button" destination="s8I-dL-X44" id="tcU-TN-5pg"/>
                         <outlet property="vastaus3Button" destination="858-hp-Muh" id="83x-OZ-duy"/>
                         <outlet property="vastaus4Button" destination="RI1-5F-spU" id="ozX-Iu-zSF"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToViewController" id="Ie2-yV-odV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Td-Rl-u3I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2806" y="1127"/>
+            <point key="canvasLocation" x="1072" y="1921"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="20l-K7-K9U">
@@ -665,6 +668,7 @@
                         <outlet property="topic5Label" destination="L5a-EP-hzJ" id="Wk9-QK-ds7"/>
                         <outlet property="topic6Label" destination="ruO-Kj-Fzm" id="haC-Es-Wii"/>
                         <segue destination="LTE-Nz-cc6" kind="show" identifier="showCategorySegue" id="IGw-b8-YYr"/>
+                        <segue destination="Ubw-Fi-qQX" kind="show" identifier="goToQuestionsSegue" id="wRe-rC-Hbm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4f-yo-pZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -734,10 +738,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gec-2c-qwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2130" y="1128"/>
+            <point key="canvasLocation" x="2225" y="1127"/>
         </scene>
     </scenes>
     <resources>
         <image name="2000px-HILLBLU_button_background" width="666" height="333"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ie2-yV-odV"/>
+        <segue reference="wRe-rC-Hbm"/>
+    </inferredMetricsTieBreakers>
 </document>

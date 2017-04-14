@@ -115,13 +115,32 @@ class ScoreViewController: UIViewController {
             self.roundTopic1 = (value?["topic1"] as? String)!
             self.topic1Label.text = self.roundTopic1
             self.round2Button.setTitle("Pelaa", for: .normal)
+                self.round3Button.setTitle("(ei valmis)", for: .normal)
+                self.round4Button.setTitle("(ei valmis)", for: .normal)
+                self.round5Button.setTitle("(ei valmis)", for: .normal)
+                self.round6Button.setTitle("(ei valmis)", for: .normal)
+                self.round7Button.setTitle("(ei valmis)", for: .normal)
+                self.round8Button.setTitle("(ei valmis)", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             
             }
             
             if kierros >= 2 {
             self.roundScore2 = (value?["round2"] as? String)!
             self.round2Button.setTitle(self.roundScore2, for: .normal)
-                self.round3Button.setTitle("Pelaa", for: .normal)
+            self.round3Button.setTitle("Pelaa", for: .normal)
+                self.round4Button.setTitle("(ei valmis)", for: .normal)
+                self.round5Button.setTitle("(ei valmis)", for: .normal)
+                self.round6Button.setTitle("(ei valmis)", for: .normal)
+                self.round7Button.setTitle("(ei valmis)", for: .normal)
+                self.round8Button.setTitle("(ei valmis)", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             }
             
             if kierros >= 3 {
@@ -130,12 +149,27 @@ class ScoreViewController: UIViewController {
                 self.roundTopic2 = (value?["topic2"] as? String)!
                 self.topic2Label.text = self.roundTopic2
                 self.round4Button.setTitle("Pelaa", for: .normal)
+                self.round5Button.setTitle("(ei valmis)", for: .normal)
+                self.round6Button.setTitle("(ei valmis)", for: .normal)
+                self.round7Button.setTitle("(ei valmis)", for: .normal)
+                self.round8Button.setTitle("(ei valmis)", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             }
             
             if kierros >= 4 {
             self.roundScore4 = (value?["round4"] as? String)!
             self.round4Button.setTitle(self.roundScore4, for: .normal)
                 self.round5Button.setTitle("Pelaa", for: .normal)
+                self.round6Button.setTitle("(ei valmis)", for: .normal)
+                self.round7Button.setTitle("(ei valmis)", for: .normal)
+                self.round8Button.setTitle("(ei valmis)", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
                 
             }
             
@@ -145,12 +179,23 @@ class ScoreViewController: UIViewController {
                 self.roundTopic3 = (value?["topic3"] as? String)!
                 self.topic3Label.text = self.roundTopic3
                 self.round6Button.setTitle("Pelaa", for: .normal)
+                self.round7Button.setTitle("(ei valmis)", for: .normal)
+                self.round8Button.setTitle("(ei valmis)", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             }
             
             if kierros >= 6 {
             self.roundScore6 = (value?["round6"] as? String)!
             self.round6Button.setTitle(self.roundScore6, for: .normal)
                 self.round7Button.setTitle("Pelaa", for: .normal)
+                self.round8Button.setTitle("(ei valmis)", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             }
             
             if kierros >= 7 {
@@ -159,12 +204,20 @@ class ScoreViewController: UIViewController {
                 self.roundTopic4 = (value?["topic4"] as? String)!
                 self.topic4Label.text = self.roundTopic4
                 self.round8Button.setTitle("Pelaa", for: .normal)
+                self.round9Button.setTitle("(ei valmis)", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             }
             
             if kierros >= 8 {
             self.roundScore8 = (value?["round8"] as? String)!
             self.round8Button.setTitle(self.roundScore8, for: .normal)
                 self.round9Button.setTitle("Pelaa", for: .normal)
+                self.round10Button.setTitle("(ei valmis)", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
+
             }
             
             if kierros >= 9 {
@@ -173,12 +226,15 @@ class ScoreViewController: UIViewController {
                 self.roundTopic5 = (value?["topic5"] as? String)!
                 self.topic5Label.text = self.roundTopic5
                 self.round10Button.setTitle("Pelaa", for: .normal)
+                self.round11Button.setTitle("(ei valmis)", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             }
             
             if kierros >= 10 {
             self.roundScore10 = (value?["round10"] as? String)!
             self.round10Button.setTitle(self.roundScore10, for: .normal)
                 self.round11Button.setTitle("Pelaa", for: .normal)
+                self.round12Button.setTitle("(ei valmis)", for: .normal)
             }
             
             if kierros >= 11 {
@@ -208,7 +264,10 @@ class ScoreViewController: UIViewController {
         
     }
     @IBAction func round2ButtonAction(_ sender: UIButton) {
-        
+        if round == 2{
+            let category = topic1Label.text
+            performSegue(withIdentifier: "goToQuestionsSegue", sender: category)
+        }
     }
     @IBAction func round3ButtonAction(_ sender: UIButton) {
         if round == 3{
@@ -218,7 +277,10 @@ class ScoreViewController: UIViewController {
         }
     }
     @IBAction func round4ButtonAction(_ sender: UIButton) {
-        
+        if round == 4{
+            let category = topic2Label.text
+            performSegue(withIdentifier: "goToQuestionsSegue", sender: category)
+        }
     }
     @IBAction func round5ButtonAction(_ sender: UIButton) {
         if round == 5{
@@ -228,7 +290,10 @@ class ScoreViewController: UIViewController {
         }
     }
     @IBAction func round6ButtonAction(_ sender: UIButton) {
-        
+        if round == 6{
+            let category = topic3Label.text
+            performSegue(withIdentifier: "goToQuestionsSegue", sender: category)
+        }
     }
     @IBAction func round7ButtonAction(_ sender: UIButton) {
         if round == 7{
@@ -238,7 +303,10 @@ class ScoreViewController: UIViewController {
         }
     }
     @IBAction func round8ButtonAction(_ sender: UIButton) {
-        
+        if round == 8{
+            let category = topic4Label.text
+            performSegue(withIdentifier: "goToQuestionsSegue", sender: category)
+        }
     }
     @IBAction func round9ButtonAction(_ sender: UIButton) {
         if round == 9{
@@ -248,7 +316,10 @@ class ScoreViewController: UIViewController {
         }
     }
     @IBAction func round10ButtonAction(_ sender: UIButton) {
-        
+        if round == 10{
+            let category = topic5Label.text
+            performSegue(withIdentifier: "goToQuestionsSegue", sender: category)
+        }
     }
     @IBAction func round11ButtonAction(_ sender: UIButton) {
         if round == 11{
@@ -258,7 +329,10 @@ class ScoreViewController: UIViewController {
         }
     }
     @IBAction func round12ButtonAction(_ sender: UIButton) {
-        
+        if round == 12{
+            let category = topic6Label.text
+            performSegue(withIdentifier: "goToQuestionsSegue", sender: category)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -269,9 +343,11 @@ class ScoreViewController: UIViewController {
             let controller = segue.destination as! CategoryViewController
             controller.numberOfCategoryToChoose = sender as! Int
             
-        } else if segue.identifier == "addQuestionSegue" {
-            //let controller = segue.destination as! ComposeViewController
-            //controller.history = self.history
+        } else if segue.identifier == "goToQuestionsSegue" {
+            let controller = segue.destination as! GameScreenViewController
+            controller.categoryName = sender as! String
+            
+            
         }
     }
 
