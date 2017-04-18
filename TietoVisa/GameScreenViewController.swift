@@ -69,8 +69,8 @@ class GameScreenViewController: UIViewController  {
         //jos kysymykset on kysytty, niin lisätään tietokantaan monta meni oikein
         else{
             print("valmis")
-            if let paska = UserDefaults.standard.object(forKey: "currentGameSaved") as? String{
-               let gameNumber = paska
+            if let temp = UserDefaults.standard.object(forKey: "currentGameSaved") as? String{
+               let gameNumber = temp
                 
                 ref?.child("Games").child(gameNumber).observeSingleEvent(of: .value, with: { (snapshot) in
                     
@@ -207,7 +207,7 @@ class GameScreenViewController: UIViewController  {
             vastaus1Button.setBackgroundImage(#imageLiteral(resourceName: "noIcon"), for: .normal)
         }
         //viivytellään muutama sekuntti ennenkuin vaihdetaan takaisin normaali iconi
-        delayWithSeconds(3) {
+        delayWithSeconds(2) {
             self.laskuri()
         }
         
@@ -223,7 +223,7 @@ class GameScreenViewController: UIViewController  {
             vastaus2Button.setBackgroundImage(#imageLiteral(resourceName: "noIcon"), for: .normal)
         }
         //viivytellään muutama sekuntti ennenkuin vaihdetaan takaisin normaali iconi
-        delayWithSeconds(3) {
+        delayWithSeconds(2) {
             self.laskuri()
         }
         
@@ -238,7 +238,7 @@ class GameScreenViewController: UIViewController  {
             vastaus3Button.setBackgroundImage(#imageLiteral(resourceName: "noIcon"), for: .normal)
         }
         //viivytellään muutama sekuntti ennenkuin vaihdetaan takaisin normaali iconi
-        delayWithSeconds(3) {
+        delayWithSeconds(2) {
             self.laskuri()
         }
         
@@ -253,7 +253,7 @@ class GameScreenViewController: UIViewController  {
             vastaus4Button.setBackgroundImage(#imageLiteral(resourceName: "noIcon"), for: .normal)
         }
         //viivytellään muutama sekuntti ennenkuin vaihdetaan takaisin normaali iconi
-        delayWithSeconds(3) {
+        delayWithSeconds(2) {
             self.laskuri()
         }
         

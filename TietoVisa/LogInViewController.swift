@@ -28,7 +28,7 @@ class LogInViewController: UIViewController  {
         {
                 FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
                     //katsotaan ettei user ole tyhjä
-                    if let u = user {
+                    if user != nil {
                         //käyttäjä löydetty, mene kotisivulle
                         self.performSegue(withIdentifier: "goToHome", sender: self)
                     }

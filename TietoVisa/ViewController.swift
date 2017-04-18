@@ -22,6 +22,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var postData = [String]()
     
+    var allWaitingGames = [Int]()
+    var allWaitingGamesHandle:FIRDatabaseHandle?
+    var allOwnGames = [String]()
+    var allOwnGamesHandle:FIRDatabaseHandle?
+    
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //TÄLLÄ SAA NÄKYMÄÄN UID:N YLÄKULMASSA
         
         usernameButton.title = user?.uid
+        
+        
+        //TÄLLÄ SAA NÄKYMÄÄN EMAILIM YLÄKULMASSA SUORAAN REFIN KAUTTA
+        
+        //usernameButton.title = user?.email
         
         
         
@@ -82,10 +92,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 //laita postidata sinne minnekuuluu eli post data arrayhin
                 self.postData.append(actualPost)
                 
-                //päivitä teblevievin sisältö
+                //päivitä tablevievin sisältö
                 self.tableView.reloadData()
             }
         })
+        
+        //tehdään handle odottaviin peleihin
+        allWaitingGamesHandle = ref?.child("Games").child("waiting").observe(.childAdded, with: { (snapshot) in
+            
+            ///kun lapsi lisätään posteihin
+            //ota arvo snapshotista ja laita se postDatataan
+            let post = snapshot.value as? Int
+            if let actualPost = post {
+                
+                //laita postidata sinne minnekuuluu eli post data arrayhin
+                self.allWaitingGames.append(actualPost)
+                
+                
+            }
+        })
+        
+        //tehään handle omiin peleihin
+        allOwnGamesHandle = ref?.child("UserData").child((user?.uid)!).child("Games").observe(.childAdded, with: { (snapshot) in
+            
+            ///kun lapsi lisätään posteihin
+            //ota arvo snapshotista ja laita se postDatataan
+            let post = snapshot.value as? String
+            if let actualPost = post {
+                
+                //laita postidata sinne minnekuuluu eli post data arrayhin
+                self.allOwnGames.append(actualPost)
+                
+                
+            }
+        })
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -127,6 +168,78 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 //let controller = segue.destination as! ComposeViewController
                 //controller.history = self.history
             }
+    }
+    @IBAction func addGameButtonAction(_ sender: UIBarButtonItem) {
+        //tässä osiossa kerrotaan mitä tapahtuu, kun painetaan "uusi peli" nappulaa
+        //tarkistetaan onko pelejä joihin voi liittyä
+        
+        //haetaan databasesta pelien numerot joihin voi liittyä
+                //tarkistetaan ettei liitytä omaan peliin ja jos ei oma, niin liitytään!/ siirrytään tekemään uusi peli, jos ei listalla ole yhtään peliä
+        print(self.allWaitingGames.count)
+        
+        
+        if self.allWaitingGames.count > 0 {
+            //------------------------------
+            //selataan läpi peli lista
+            print("listalla oli pelejä")
+            
+            var freeGame = Int()
+            for gameNumber in self.allWaitingGames {
+                print(gameNumber)
+                var canJoin = true
+                for ownGameNumber in self.allOwnGames{
+                    let gameNumberAsString = String(gameNumber)
+                    if ownGameNumber == gameNumberAsString {
+                        print("sama numero")
+                        canJoin = false
+                    }
+                }
+                
+                if canJoin {
+                    freeGame = gameNumber
+                }
+            }
+            //--------------------------------------
+            //kun peli on löytynyt, liitytään siihen!!
+            print("peli johon tullaan liittymään", freeGame)
+            
+            let userAsString = String((user?.uid)!)!
+            //lisätään peliin oma uid
+            let childUpdates = ["/Games/\(String(freeGame))/player2/": userAsString]
+            ref?.updateChildValues(childUpdates)
+            
+            //poistetaan peli jonotuslistalta
+            ref?.child("Games").child("waiting").child(String(freeGame)).removeValue()
+            
+            //postataan peli omiin meneillään oleviin peleihin
+            let ownGamesUpdate = ["/UserData/\(String((user?.uid)!)!)/Games/\(freeGame)": String(freeGame)]
+            ref?.updateChildValues(ownGamesUpdate)
+        }
+            
+        else{
+        
+            //----------------------------
+            //tehdään uusi peli
+            //arvotaan eka pelille numero
+            let randomGameNumber = arc4random_uniform(UInt32(10000000))
+            print("pelinumero:")
+            print(randomGameNumber)
+        
+            //postataan pelinumerolla oleva peli peleihin
+            let post = ["playedRounds": 0,
+                    "player1": user?.uid,
+                    "player2": "waiting"] as [String : Any]
+        
+            let childUpdates = ["/Games/\(randomGameNumber)": post]
+            ref?.updateChildValues(childUpdates)
+            //postataan peliä odottava peli waiting listalle
+            let gameNumberUpdate = ["/Games/waiting/\(randomGameNumber)": randomGameNumber]
+            ref?.updateChildValues(gameNumberUpdate)
+            //postataan peli omiin meneillään oleviin peleihin
+       
+            let ownGamesUpdate = ["/UserData/\(String((user?.uid)!)!)/Games/\(randomGameNumber)": String(randomGameNumber)]
+            ref?.updateChildValues(ownGamesUpdate)
+        }
     }
 }
 
