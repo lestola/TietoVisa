@@ -40,12 +40,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         //TÄLLÄ SAA NÄKYMÄÄN UID:N YLÄKULMASSA
         
-        usernameButton.title = user?.uid
+        //usernameButton.title = user?.uid
         
         
         //TÄLLÄ SAA NÄKYMÄÄN EMAILIM YLÄKULMASSA SUORAAN REFIN KAUTTA
         
-        //usernameButton.title = user?.email
+        usernameButton.title = user?.email
         
         
         
