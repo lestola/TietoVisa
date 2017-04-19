@@ -94,14 +94,19 @@ class ScoreViewController: UIViewController {
             
             print(player1Id)
             print((self.user?.uid)!)
+            
+            if player1Id == String((self.user?.uid)!){
+                self.player1Label.text = "Sinä"
+            }
+            if player2Id == String((self.user?.uid)!){
+                self.player2Label.text = "Sinä"
+            }
+            
             if player1Id == String((self.user?.uid)!) && kierros == 0 {
                 self.isPlayerTurn = true
-
-                
             }
             if player2Id == String((self.user?.uid)!) && kierros == 1 {
                 self.isPlayerTurn = true
-                
             }
             if player2Id == String((self.user?.uid)!) && kierros == 2 {
                 self.isPlayerTurn = true
@@ -132,20 +137,6 @@ class ScoreViewController: UIViewController {
             }
             if player1Id == String((self.user?.uid)!) && kierros == 11 {
                 self.isPlayerTurn = true
-            }
-            
-            //tulostetaan kumpi pelaaja on sinä ja kumpi vastustaja
-            if kierros % 2 == 1 && self.isPlayerTurn == true{
-                self.player2Label.text = "Sinä"
-            }
-            else if kierros % 2 == 1 && self.isPlayerTurn == false{
-                self.player1Label.text = "Sinä"
-            }
-            else if kierros % 2 == 0 && self.isPlayerTurn == true{
-                self.player1Label.text = "Sinä"
-            }
-            else if kierros % 2 == 0 && self.isPlayerTurn == false {
-                self.player2Label.text = "Sinä"
             }
             
             print(kierros)
@@ -450,8 +441,6 @@ class ScoreViewController: UIViewController {
             performSegue(withIdentifier: "goToQuestionsSegue", sender: category)
         }
     }
-    
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //let guest : ScoreViewController = segue.destination as! ScoreViewController
